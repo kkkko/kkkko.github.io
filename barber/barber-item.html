@@ -120,6 +120,79 @@
         	<a class="btn" href="htmlacademy.ru">HTMLACADEMY.RU</a>
         </section>
         </div>
-      </footer> 
+      </footer>
+
+      <div class="modal-content">
+      <div class="modal-content-show">
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <h2 class="modal-content-title">Личный кабинет</h2>
+        <p>Введите пожалуйста свой логин и пароль</p>
+        <form class="login-form" action="https://echo.html.academy.ru" method="post">
+          <input class="icon-user" type="text" name="login" value="" placeholder="Логин" >
+          <input class="icon-password" type="text" name="password" value="" placeholder="Пароль">
+          <label class="login-checkbox">
+            <input type="checkbox" name="remember">
+            <span class="checkbox-indicator"></span>Запомните меня
+            </label>
+          <a class="restore" href="">Я забыл пароль!</a>
+          <button class="btn" type="submit">Войти</button>
+        </form>
+      </div>
+      </div>
+
+    <div class="overlay-off"><div class="overlay-on"></div></div>
+
+    <script type="text/javascript">
+
+      var link = document.querySelector(".login");
+      var popup = document.querySelector(".modal-content");
+      var close = document.querySelector("modal-content-close");
+      var form = popup.querySelector("form");
+      var login = popup.querySelector("[name=login]");
+      var password = popup.querySelector("[name=password]");
+      var storage = localStorage.getItem("login");
+      var overlay = document.querySelector(".overlay-off")
+
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-content-show");
+        overlay.classList.add("overlay-on")
+        login.focus();
+
+        if (storage) {
+          login.value = storage;
+          password.focus ();
+        } else {
+            login.focus ();
+        }
+      });
+
+      /* close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+        popup.classList.remove("modal-error");
+        }); */
+
+      form.addEventListener("submit", function(event) {
+        if (!login.value || !password.value) {
+          event.preventDefault ();
+          popup.classList.add("modal-error");
+        } else {
+            localStorage.setItem("login", login.value);
+        }
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("modal-content-show")) {
+          popup.classList.remove("modal-content-show");
+          overlay.classList.remove("overlay-on")
+          }
+        }
+      });
+
+    </script>
+
+     
   </body>
  </html>

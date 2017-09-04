@@ -169,9 +169,11 @@
         <iframe src="https://yandex.ru/map-widget/v1/-/C6UfR-1e" width="766"
           height="561" frameborder="0"></iframe>
       </div>
-      <div class="modal-overlay"></div>
+      
+      <div class="overlay-off"><div class="overlay-on"></div></div>
 
     <script type="text/javascript">
+
       var link = document.querySelector(".login");
       var popup = document.querySelector(".modal-content");
       var close = document.querySelector("modal-content-close");
@@ -182,10 +184,12 @@
       var mapOpen = document.querySelector(".js-open-map");
       var mapPopup = document.querySelector(".modal-content-map");
       var mapClose = mapPopup.querySelector(".modal-content-close");
+      var overlay = document.querySelector(".overlay-off")
 
       link.addEventListener("click", function(event) {
         event.preventDefault();
         popup.classList.add("modal-content-show");
+        overlay.classList.add("overlay-on")
         login.focus();
 
         if (storage) {
@@ -215,6 +219,7 @@
         if (event.keyCode === 27) {
           if (popup.classList.contains("modal-content-show")) {
           popup.classList.remove("modal-content-show");
+          overlay.classList.remove("overlay-on")
           }
         }
       });
@@ -224,6 +229,7 @@
       mapOpen.addEventListener("click", function(event) {
         event.preventDefault ();
         mapPopup.classList.add("modal-content-show");
+        overlay.classList.add("overlay-on")
       });
 
       /* mapClose.addEventListener("click", function(event) {
@@ -235,6 +241,7 @@
         if (event.keyCode === 27) {
           if (mapPopup.classList.contains("modal-content-show")) {
             mapPopup.classList.remove("modal-content-show");
+            overlay.classList.remove("overlay-on")
           }
         }
       });
