@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700; subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="jquery/jquery-ui.css" rel="stylesheet">
+    <script src="jqueri/jquery-ui.js"></script>
     <meta name="area.size" content="width=1200,height=2416">
   </head>
   <body>
@@ -21,7 +23,7 @@
                   <a href="#">Новинки</a>
                 </li>
                 <li>
-                  <a href="#">Сливочное</a>
+                  <a href="#" class="main-navigation-active">Сливочное</a>
                 </li>
                 <li>
                   <a href="#">Щербеты</a>
@@ -50,7 +52,7 @@
                 <li>
                   <form class="search-form" action="https://echo.html.academy.ru" method="post">
                   <div class="field">
-                    <input class="field-input field-input-search" type="text" name="search" id="search">
+                    <input class="field-input field-input-search" type="text" name="search" id="search" required>
                     <label class="field-label field-label-search" for="search" data-first="Что ищем?"></label>
                   </div>
                     <button class="search-btn" type="submit"></button>

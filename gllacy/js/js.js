@@ -17,6 +17,8 @@ var feedbackName = feedbackPopup.querySelector("[name=name]");
 var feedbackMail = feedbackPopup.querySelector("[name=mail]");
 var feedbackText = feedbackPopup.querySelector(".feedback-text");
 
+var overlay = document.querySelector(".overlay-off");
+
 searchForm.addEventListener("submit", function(event) {
   if (!searchContains.value) {
       event.preventDefault ();
@@ -48,6 +50,7 @@ loginForm.addEventListener("mouseout", function(event) {
 feedbackLink.addEventListener("click", function(event) {
   event.preventDefault();
   feedbackPopup.classList.add("feedback-show");
+  overlay.classList.add("overlay-on");
 });
 
 
@@ -64,6 +67,7 @@ feedbackClose.addEventListener("click", function(event) {
   event.preventDefault();
   feedbackPopup.classList.remove("feedback-show");
   feedbackPopup.classList.remove("modal-error");
+  overlay.classList.remove("overlay-on");
   }); 
 
 window.addEventListener("keydown", function(event) {
@@ -73,3 +77,4 @@ window.addEventListener("keydown", function(event) {
       }
     }
 });
+
