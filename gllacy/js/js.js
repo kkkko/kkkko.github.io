@@ -74,6 +74,7 @@ window.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {
   if (feedbackPopup.classList.contains("feedback-show")) {
       feedbackPopup.classList.remove("feedback-show");
+       overlay.classList.remove("overlay-on");
       }
     }
 });
