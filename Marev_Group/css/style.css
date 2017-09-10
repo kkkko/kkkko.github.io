@@ -191,3 +191,30 @@ video {
 .border {
   border: 1px solid red;
 }
+
+@media (max-width: 1200px) {
+
+.popup {
+  text-align: center;
+}
+
+.form-btn {
+  float: none;
+}
+}
+
+@media (max-width: 576px) {
+
+.popup {
+  width: 79%;
+  padding: 10px 15px;
+  left: 11%;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 39px;
+  line-height: 35px;
+}
+}
+
