@@ -455,9 +455,9 @@ ul { list-style: outside none none; padding: 0px; }
 .section8_form_inner { display: flex; -moz-box-align: center; align-items: center; padding: 0px 70px; }
 .section8_form_inner_right { position: relative; }
 .section8_form_inner_right::after { content: ""; display: block; position: absolute; width: 137px; height: 145px; top: -101px; right: -141px; background: rgba(0, 0, 0, 0) url('form_arrow.png') no-repeat scroll center center; }
-.section8_form_inner_right_inner { box-sizing: border-box; display: flex; -moz-box-align: center; align-items: center; min-height: 82px; border-radius: 4px; overflow: hidden; border: 2px solid rgb(255, 205, 0); background-color: rgb(234, 234, 234); }
+.section8_form_inner_right_inner { visibility: hidden; box-sizing: border-box; display: flex; -moz-box-align: center; align-items: center; min-height: 82px; border-radius: 4px; overflow: hidden; border: 2px solid rgb(255, 205, 0); background-color: rgb(234, 234, 234); }
 .section8_form_inner_left_top { font-family: "ProximaNovaBold"; font-size: 17px; }
-.section8_form_inner_left { text-align: center; margin-right: 20px; }
+.section8_form_inner_left { visibility: hidden; text-align: center; margin-right: 20px; }
 .section8_form_inner_left_bottom { display: inline-block; font-family: "ProximaNovaBold"; color: rgb(255, 255, 255); padding: 3px 10px; border-radius: 4px; font-size: 30px; background-color: rgb(255, 0, 0); }
 .section8_form_text { max-width: 160px; font-family: "ProximaNovaBold"; font-size: 23px; padding: 0px 15px; display: flex; -moz-box-align: center; align-items: center; min-height: 82px; background-color: rgb(255, 205, 0); line-height: 100%; }
 .section8_form_inputs { width: 100%; box-sizing: border-box; display: flex; justify-content: space-around; padding: 0px 20px; }
@@ -704,7 +704,7 @@ ul { list-style: outside none none; padding: 0px; }
 .kaz_input_wrapper input, .kaz_input_wrapper select { box-sizing: border-box; padding: 0px 18px; margin-bottom: 13px; height: 40px; width: 100%; background-color: rgb(255, 255, 255); box-shadow: none; border-radius: 3px; border: 2px solid rgb(255, 255, 255); outline: medium none; color: rgb(31, 33, 41); font-size: 15px; }
 .kaz_input_wrapper button { width: 100%; height: 40px; border: medium none; outline: medium none; font-size: 19px; cursor: pointer; font-family: "ProximaNovaBold"; text-transform: uppercase; border-radius: 3px; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgb(148, 148, 148) 0%, rgb(141, 141, 141) 50%, rgb(131, 131, 131) 100%) repeat scroll 0% 0%; color: rgb(255, 255, 255); transition: all 0.6s ease 0s; }
 .kaz_input_wrapper button:hover { background: rgb(118, 239, 255) none repeat scroll 0% 0%; color: rgb(0, 0, 0); }
-.kaz_form_bottom { margin-top: 20px; font-size: 15px; line-height: 100%; text-align: center; }
+.kaz_form_bottom { margin-top: -30px; font-size: 15px; line-height: 100%; text-align: center; }
 .kaz_form_bottom_bold { font-family: "ProximaNovaBold"; }
 .section1_blocks { padding-right: 0px; }
 @media only screen and (max-width: 1300px) {
@@ -814,9 +814,11 @@ ul { list-style: outside none none; padding: 0px; }
 
 
 .b4FormWrap {
+  visibility: hidden;
   position: relative;
   box-sizing: border-box;
   max-width: 280px;
+  height: 400px;
   margin: 8px auto 0px;
   padding: 20px;
   text-align: center;
