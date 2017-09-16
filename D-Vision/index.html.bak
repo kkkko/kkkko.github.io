@@ -921,11 +921,20 @@ src="https://www.facebook.com/tr?id=1924095774517999&ev=PageView&noscript=1"/></
 				</tbody></table>
 			</div>
 			<div class="section8_form" id="section8_form">
-				<div class="section8_form_title">Забронировать по акции - 50%  <span class="js_percent_sign" style="visibility: hidden;">50%</span></div>
+				<div class="section8_form_title">Забронировать по акции - 50%<span class="js_percent_sign" style="visibility: hidden;">50%</span></div>
 				<div class="section8_form_wrapper">
 					<div class="section8_form_inner">
+						<div class="section8_form_inner_left">
+							<div class="section8_form_inner_left_top"><span class="line_through"><span class="old-amount js_old_price">1956</span> <span class="init_price-txt currency js_curs"> руб.</span></span>
+							</div>
+							<div class="section8_form_inner_left_bottom"><span class="tot-amount js_new_price">978</span> <span class="init_price-txt currency js_curs"> руб.</span></div>
+						</div>
 						<div class="section8_form_inner_right">
 							<div class="section8_form_inner_right_inner">
+								<div class="section8_form_text">
+									<div class="vision_center">
+										до <span class="before_date">13.09.17</span> скидка <span class="js_percent_sign">50%</span></div>
+								</div>
 								<iframe src="http://ctrif.info/?freez=off&pr=&dr=aHR0cDovL2N0cmlmLmluZm8=&trf_dt=c2l0ZV9pZD0zNDU5JnVzZXJfaWQ9OTE4OSZwcl9pZD0wJmk9eQ==&prm=ZnJlZXo9b2Zm" style=" visibility: visible; border: none; height: 420px; width: 280px;"></iframe>
 
 							</div>
@@ -1064,9 +1073,21 @@ src="https://www.facebook.com/tr?id=1924095774517999&ev=PageView&noscript=1"/></
 				</div>
 			</div>
 			<div class="section11_form" id="form">
+				<div class="section8_form_inner_left">
+					<div class="section11_form_wrapper">
+						<div class="section8_form_inner_left_top"><span class="line_through"><span class="old-amount js_old_price">1956</span> <span class="init_price-txt currency js_curs"> руб.</span></span>
+						</div>
+						<div class="section8_form_inner_left_bottom"><span class="tot-amount js_new_price">990</span> <span class="init_price-txt currency js_curs"> руб.</span></div>
+					</div>
+				</div>
 				<div class="section8_form_inner_right">
 					<div class="section8_form_inner_right_inner">
-						<iframe src="http://ctrif.info/?freez=off&pr=&dr=aHR0cDovL2N0cmlmLmluZm8=&trf_dt=c2l0ZV9pZD0zNDU5JnVzZXJfaWQ9OTE4OSZwcl9pZD0wJmk9eQ==&prm=ZnJlZXo9b2Zm" style=" visibility: visible; border: none; height: 420px; width: 280px; margin: 0 auto;"></iframe>
+						<div class="section8_form_text">
+							<div class="vision_center">
+								до <span class="before_date">13.09.17</span> скидка <span class="js_percent_sign">50%</span></div>
+						</div>
+						<iframe src="http://ctrif.info/?freez=off&pr=&dr=aHR0cDovL2N0cmlmLmluZm8=&trf_dt=c2l0ZV9pZD0zNDU5JnVzZXJfaWQ9OTE4OSZwcl9pZD0wJmk9eQ==&prm=ZnJlZXo9b2Zm" style=" visibility: visible; border: none; height: 420px; width: 280px; margin-left: 50px; "></iframe>
+
 					</div>
 				</div>
 				<div class="section8_form_bottom_text">Количество акционных товаров ограничено: <span class="packages-count">18</span> упаковок </div>

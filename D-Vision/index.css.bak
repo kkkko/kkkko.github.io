@@ -505,10 +505,10 @@ ul { list-style: outside none none; padding: 0px; }
 .section8_table_inner tr:last-child td { background-color: transparent; }
 .section8_table_stars img { margin: 0px 3px; }
 .table_bold { font-family: "ProximaNovaBold"; font-size: 31px; text-transform: uppercase; }
-.section8_form { text-align: center; margin-top: 30px; }
+.section8_form { margin-top: 30px; }
 .section8_form_title { text-align: center; font-family: "ProximaNovaBold"; font-size: 30px; margin-bottom: 30px; }
 .section8_form_inner { display: flex; -moz-box-align: center; align-items: center; padding: 0px 70px; }
-.section8_form_inner_right { margin: 0 auto; position: relative; }
+.section8_form_inner_right { position: relative; }
 .section8_form_inner_right::after { content: ""; display: block; position: absolute; width: 137px; height: 145px; top: -101px; right: -141px; background: rgba(0, 0, 0, 0) url('form_arrow.png') no-repeat scroll center center; }
 .section8_form_inner_right_inner { visibility: hidden; box-sizing: border-box; display: flex; -moz-box-align: center; align-items: center; min-height: 82px; border-radius: 4px; overflow: hidden; border: 2px solid rgb(255, 205, 0); background-color: rgb(234, 234, 234); }
 .section8_form_inner_left_top { font-family: "ProximaNovaBold"; font-size: 17px; }
@@ -870,102 +870,3 @@ ul { list-style: outside none none; padding: 0px; }
 #cbkr_form form:-moz-placeholder { color: rgb(136, 136, 136); }
 #cbkr_form form input[type="submit"] { position: static; cursor: pointer; border: 0px none; background: rgb(196, 25, 28) none repeat scroll 0% 0%; padding: 0px 10px; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 38px; height: 38px; vertical-align: top; margin: 0px; display: inline-block; text-indent: 0px; text-align: center !important; border-radius: 3px; font-style: normal; font-size: 14px; font-family: Arial,Helvetica,sans-serif; width: auto; opacity: 1; }
 #cbkr_form form input[type="submit"]:hover { background: rgb(221, 7, 11) none repeat scroll 0% 0%; text-decoration: none; }
-
-.b4FormWrap {
-  visibility: hidden;
-  position: relative;
-  box-sizing: border-box;
-  max-width: 280px;
-  height: 400px;
-  margin: 8px auto 0px;
-  padding: 20px;
-  text-align: center;
-  background-color: rgb(247, 199, 0);
-  border-top: 1px solid rgb(249, 216, 78);
-  border-right: 1px solid rgb(211, 170, 0);
-  border-bottom: 1px solid rgb(211, 170, 0);
-  border-radius: 3px;
-  box-shadow: 50px 11px 23px -35px rgb(136, 102, 24) inset;
-}
-.b4FormWrap:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -106px;
-  left: -129px;
-  width: 141px;
-  height: 418px;
-  background: rgba(0, 0, 0, 0) url(form_pack.png) no-repeat scroll center center / cover;
-}
-.b4FormWrap h3 {
-  font-size: 20px;
-  text-align: center;
-  font-family: "ProximaNovaBold";
-  margin-bottom: 18px;
-}
-.b4Skidka {
-  color: #F2E72F;
-}
-.oldPrice {
-  font: 18px/18px "CalibriRegular";
-  color: #fff;
-  text-decoration: line-through;
-}
-.newPrice {
-  font: 45px/45px "CalibriRegular";
-  color: #FFF323;
-}
-label.cpa-control-label, span.cpa-control-amount {
-  display: none;
-}
-select, input {
-  box-sizing: border-box;
-  padding: 0px 18px;
-  margin-bottom: 13px;
-  height: 40px;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  box-shadow: none;
-  border-radius: 3px;
-  border: 2px solid rgb(255, 255, 255);
-  outline: medium none;
-  color: rgb(31, 33, 41);
-  font-size: 15px;
-}
-::-webkit-input-placeholder {color:#B2B3B3;}
-::-moz-placeholder          {color:#B2B3B3;}/* Firefox 19+ */
-:-moz-placeholder           {color:#B2B3B3;}/* Firefox 18- */
-:-ms-input-placeholder      {color:#B2B3B3;}
-
-button.cpa-input-submit {
-  width: 232px;
-  height: 40px;
-  border: medium none;
-  outline: medium none;
-  font-size: 19px;
-  cursor: pointer;
-  font-family: "ProximaNovaBold";
-  text-transform: uppercase;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgb(148, 148, 148) 0%, rgb(141, 141, 141) 50%, rgb(131, 131, 131) 100%) repeat scroll 0% 0%;
-  color: rgb(255, 255, 255);
-  transition: all 0.6s ease 0s;
-  margin: 0px;
-  padding: 0px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00dcee+0,0068a2+50,000e6a+100 */
-    background: #00dcee; /* Old browsers */
-    background: -moz-linear-gradient(top, #00dcee 0%, #0068a2 50%, #000e6a 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #00dcee 0%,#0068a2 50%,#000e6a 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #00dcee 0%,#0068a2 50%,#000e6a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dcee', endColorstr='#000e6a',GradientType=0 ); /* IE6-9 */
-}
-button.cpa-input-submit:hover {
-  background: rgb(118, 239, 255) none repeat scroll 0% 0%;
-    color: rgb(0, 0, 0);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000e6a+0,0068a2+50,00dcee+100 */
-  background: #000e6a; /* Old browsers */
-  background: -moz-linear-gradient(top, #000e6a 0%, #0068a2 50%, #00dcee 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #000e6a 0%,#0068a2 50%,#00dcee 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #000e6a 0%,#0068a2 50%,#00dcee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e6a', endColorstr='#00dcee',GradientType=0 ); /* IE6-9 */
-}
