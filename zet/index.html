@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link href="css/animate.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -11,24 +12,28 @@
 </head>
 <body>
 
-  <div class="header">  
+  <header id="header">  
     <div class="container">
       <div class="row nav-bar">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 logo">
-          ZET
+          <a href="#">ZET</a>
           <a class="nav-bar-menu-btn"><h1>Menu</h1><img src="css/img/top-menu.png"></a>
         </div>
       </div>
-      <div class="row header-content">
+    </div>
+  </header>
+  <div class="top-wrapper top">
+    <div class="container">
+      <div class="row top-content animated fadeInDown duration-2s">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <h2>Something Nothing</h2>
           <p>Enean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim iam ultricies nisi eleifend tellus.</p>
-          <a href="#" class="btn header-content-btn">Let's talk</a>
+          <a href="#" class="btn top-content-btn">Let's talk</a>
         </div>
       </div>
-      <div class="row to-main">
+      <div class="row to-main animated fadeInDown">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <a href="#" class="to-main-btn">
+          <a href="#to-main" class="to-main-btn smoothScroll">
             <img src="css/img/arrow.png" class="arrow"> 
           </a>
         </div>
@@ -36,7 +41,7 @@
     </div>
   </div>
 
- <div class="main">
+ <div id="to-main" class="main">
     <div class="services-wrapper">
     <div class="container services-container">
       <div class="row content">
@@ -52,17 +57,17 @@
         <h2>FULLY RESPONSIVE</h2>
         <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
       </div>
-      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 services-column">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 services-column delay-05s">
         <img src="css/img/main-services-column-img-2.png">
         <h2>EASY CUSTOMIZE</h2>
         <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae.</p>
       </div>
-      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 services-column">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 services-column delay-1s">
         <img src="css/img/main-services-column-img-3.png">
         <h2>SEO READY</h2>
         <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi</p>
       </div>
-      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 services-column">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 services-column delay-1o5s">
         <img src="css/img/main-services-column-img-4.png">
         <h2>MADE WITH LOVE</h2>
         <p>Ecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.
@@ -81,8 +86,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
-    <!-- <div class="works-gallery">
+     <div class="works-gallery">
         <div class="works-img">
         <a href="#">
           <img src="css/img/works-example-1.png" alt="">
@@ -218,8 +222,7 @@
           </div>
         </a>
         </div>
-      </div> -->
-    </div>
+      </div>
       <div class="clearfix"></div>
 
   <div class="container clients-container">
@@ -230,7 +233,15 @@
         <img src="css/img/post-main-content-line.jpg">
       </div>
     </div>
-    <div class="row clients-quote">
+     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row clients-quote">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         <p> Bebed pupu warni sangsam ngundang ajang, gujeng sirah lair menda bebucal benang; lek-lekan? Madeg pendhet lenggah, "nanem dipetak dhuwung, dipun awis bokong ayam. gendhis angsal Jawa Ipsum nangis rumput wilujeng unyeng-unyeng; pados gujeng benter andhap lisa Leres, lisah, ulem-ulem nedhi gesang manah cangkem: nem aken benter bebucal baita dangu</p>
       </div>
@@ -243,6 +254,39 @@
         <p>Dropbox Senior Developer</p>
         </div>
     </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row clients-quote">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p> Bebed pupu warni sangsam ngundang ajang, gujeng sirah lair menda bebucal benang; lek-lekan? Madeg pendhet lenggah, "nanem dipetak dhuwung, dipun awis bokong ayam. gendhis angsal Jawa Ipsum nangis rumput wilujeng unyeng-unyeng; pados gujeng benter andhap lisa Leres, lisah, ulem-ulem nedhi gesang manah cangkem: nem aken benter bebucal baita dangu</p>
+      </div>
+      <img src="css/img/post-quote.png">
+    </div>
+    <div class="row clients-quote-face">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <img src="css/img/clients-face.png">
+        <h3>Vasily Nganu</h3>
+        <p>Dropbox Senior Developer</p>
+        </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row clients-quote">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p> Bebed pupu warni sangsam ngundang ajang, gujeng sirah lair menda bebucal benang; lek-lekan? Madeg pendhet lenggah, "nanem dipetak dhuwung, dipun awis bokong ayam. gendhis angsal Jawa Ipsum nangis rumput wilujeng unyeng-unyeng; pados gujeng benter andhap lisa Leres, lisah, ulem-ulem nedhi gesang manah cangkem: nem aken benter bebucal baita dangu</p>
+      </div>
+      <img src="css/img/post-quote.png">
+    </div>
+    <div class="row clients-quote-face">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <img src="css/img/clients-face.png">
+        <h3>Vasily Nganu</h3>
+        <p>Dropbox Senior Developer</p>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
   </div>
 
   <div class="team-wrapper">
@@ -254,34 +298,37 @@
         <img src="css/img/post-main-content-line-white.jpg">
       </div>
     </div>
-    <div class="row team-profile-row justify-content-center">
-      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 team-profile-col">
-        <img src="css/img/salazar.jpg">
-        <div class="profile-caption">
-          <h3>Salazar Slytherin</h3>
-          <p>CEO</p>
-          <div class="social-btn">
-            <ul>
-          	  <li>
-          	    <a href="#"><i class="fa fa-twitter"></i></a>
-          	  </li>
-          	  <li>
-          	    <a href="#"><i class="fa fa-linkedin"></i></a>
-          	  </li>
-          	  <li>
-          	    <a href="#"><i class="fa fa-vimeo-square"></i></a>
-          	  </li>
-          	  <li>
-          	    <a href="#"><i class="fa fa-dribbble"></i></a>
-          	  </li>
-          	  <li>
-          	    <a href="#"><i class="fa fa-envelope"></i></a>
-          	  </li>
+    <div class="row team-profile-row">
+      <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="team-profile-col">
+          <img src="css/img/salazar.jpg">
+          <div class="profile-caption">
+            <h3>Salazar Slytherin</h3>
+            <p>CEO</p>
+            <div class="social-btn">
+              <ul>
+          	    <li>
+          	      <a href="#"><i class="fa fa-twitter"></i></a>
+          	    </li>
+          	    <li>
+          	      <a href="#"><i class="fa fa-linkedin"></i></a>
+          	    </li>
+          	    <li>
+          	      <a href="#"><i class="fa fa-vimeo-square"></i></a>
+          	    </li>
+          	    <li>
+          	      <a href="#"><i class="fa fa-dribbble"></i></a>
+          	    </li>
+          	    <li>
+          	      <a href="#"><i class="fa fa-envelope"></i></a>
+          	    </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 team-profile-col">
+    </div>
+      <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="team-profile-col delay-05s">
         <img src="css/img/gryffindor.jpg">
         <div class="profile-caption">
         <h3>GodricT Gryffindor</h3>
@@ -307,7 +354,9 @@
         </div>
       </div>
       </div>
-      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 team-profile-col">
+    </div>
+      <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="team-profile-col delay-1s">
         <img src="css/img/ravenclaw.jpg">
         <div class="profile-caption">
         <h3>Rowena Ravenclaw</h3>
@@ -333,7 +382,9 @@
         </div>
       </div>
       </div>
-      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 team-profile-col">
+    </div>
+      <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="team-profile-col delay-1o5s">
         <img src="css/img/hufflepuff.jpg">
         <div class="profile-caption">
         <h3>Helga Hufflepuff</h3>
@@ -359,6 +410,7 @@
         </div>
       </div>
       </div>
+    </div>
     </div>
     <div class="row">
       <div class="col-xl-12">
@@ -506,6 +558,7 @@
     </div>
   </footer>
   </div>
+  
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>

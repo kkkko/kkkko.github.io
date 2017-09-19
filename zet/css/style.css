@@ -29,6 +29,24 @@
   src: url("fonts/OpenSans-ExtraBold.ttf");
 }
 
+.duration-2s {
+  animation-duration: 2s;
+}
+
+.delay-05s {
+  animation-delay: 0.5s;
+}
+
+.delay-1s {
+  animation-delay: 1s;
+}
+
+.delay-1o5s {
+  animation-delay: 1.5s;
+}
+
+
+
 .btn:hover {
   background-color: #010b1d;
   cursor: pointer;
@@ -39,13 +57,20 @@
   background-color: #ffffff;
 }
 
-.header {
-  padding-top: 30px;
-  background: url("img/header-background.jpg") no-repeat top center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 40px;
+  z-index: 10;
+  transition: all 0.4s ease-out;
+}
+
+.sticky {
+  position: fixed;
+  background: #29323c;
+  padding: 5px 0 15px;
 }
 
 .logo {
@@ -53,6 +78,15 @@
   font-family: "Airbag", sans-serif;
   font-size: 48px;
   line-height: 36px;
+}
+
+.logo a {
+  color: #ffffff;
+}
+
+.logo a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .nav-bar-menu-btn {
@@ -67,7 +101,7 @@
 
 .nav-bar-menu-btn h1 {
   position: absolute;
-  top: 8px;
+  top: 3px;
   left: -55px;
   color: #ffffff;
   font-family: "Montserrat-Regular", sans-serif;
@@ -79,12 +113,36 @@
   cursor: pointer;
 }
 
-.header-content {
+.nav-bar img {
+  position: absolute;
+  top: 15px;
+  left: -8px;
+}
+
+@media (max-width: 992px) {
+  .nav-bar-menu-btn h1 {
+    display: none;
+  }
+  .nav-bar-menu-btn {
+    left: -20px;
+  }
+}
+
+.top-wrapper {
+  padding-top: 30px;
+  background: url("img/header-background.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.top-content {
   margin-top: 200px;
   text-align: center;
 }
 
-.header h2 {
+.top h2 {
   margin-bottom: 26px;
   text-align: center;
   color: #ffffff;
@@ -93,7 +151,7 @@
   line-height: 40px;
 }
 
-.header p {
+.top p {
   max-width: 631px;
   margin: 0 auto;
   margin-bottom: 33px;
@@ -104,7 +162,7 @@
   line-height: 25px;
 }
 
-.header-content-btn {
+.top-content-btn {
   display: inline-block;
   margin: 0;
   margin-bottom: 144px;
@@ -119,7 +177,7 @@
   border-radius: 25px;
 }
 
-.header-content-btn:hover {
+.top-content-btn:hover {
   color: #ffffff;
   background-color: #010b1d;
   text-decoration: none;
@@ -187,6 +245,17 @@
   text-decoration: none;
 }
 
+.works-img {
+  width: 337px;
+  height: 220px;
+  float: left;
+}
+
+.works-img img {
+  width: 337px;
+  height: 220px;
+}
+
 .caption {
   display: none;
 }
@@ -208,23 +277,32 @@
   line-height: 20px;
 }
 
-.main-works-example {
-  width: 100%;
-}
-
-.works-img {
-  width: 337px;
-  height: 220px;
-  float: left;
-}
-
-.works-img img {
-  width: 337px;
-  height: 220px;
-}
-
 .clients-container {
   text-align: center;
+}
+
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  background-color: transparent;
+}
+
+.carousel-indicators li:hover {
+  background-color: #4c5c70;
+}
+
+.carousel-indicators .active {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  background-color: #2b3746;
+}
+
+.carousel-indicators .active:hover {
+  background-color: #192a3f;
 }
 
 .clients-quote p {
@@ -251,7 +329,7 @@
 }
 
 .clients-quote-face p {
-  margin-bottom: 150px;
+  margin-bottom: 70px;
   color: #696d73;
   font-family: "Montserrat-Regular", sans-serif;
   font-size: 13px;
@@ -277,14 +355,20 @@
   color: #dee0e0;
 }
 
+.team-container .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .team-profile-row {
   margin-bottom: 60px;
 }
 
 .team-profile-col {
   max-width: 270px;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 30px;
+  padding: 0;
 }
 
 .team-profile-col img {
@@ -292,8 +376,11 @@
 }
 
 .profile-caption {
+  display: block;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #cbd0d1;
 }
 
@@ -373,6 +460,11 @@ a .fa {
 
 .main-price {
   margin-bottom: 70px;
+}
+
+.price-container .row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .price-col {
@@ -473,7 +565,6 @@ a .fa {
 .map-and-form {
   width: 100%;
 }
-
 
 .map {
   float: left;
@@ -636,6 +727,10 @@ footer a .fa:hover {
 }
 
 @media (max-width: 767px) {
+.best-pack {
+  margin-top: 35px;
+}
+
 .copyright {
   float: none;
   text-align: center;
