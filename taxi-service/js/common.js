@@ -17,9 +17,9 @@ $(document).ready(function() {
 
 	$(".container-name").animated("fadeInDown", "fadeOut");
 
-	$(".economy__class").animated("fadeInLeft", "fadeOut");
-	$(".standard__class").animated("fadeInUp", "fadeOut");
-	$(".business__class").animated("fadeInRight", "fadeOut");
+	$(".economy__class").animated("fadeInLeftSmall", "fadeOut");
+	$(".standard__class").animated("fadeInDownSmall", "fadeOut");
+	$(".business__class").animated("fadeInRightSmall", "fadeOut");
 
 	$(".advantages-content-left").animated("fadeInLeft", "fadeOut");
 	$(".advantages-content-right").animated("fadeInRight", "fadeOut");
