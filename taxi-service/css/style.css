@@ -17,18 +17,7 @@ html {
 @media (max-width: 568px) {
   html {
     font-size: 60%; } }
-@font-face {
-  font-family: "Lato-Regular", sans-serif;
-  src: url(fonts/Lato-Regular.ttf); }
-@font-face {
-  font-family: "Lato-Semibold", sans-serif;
-  src: url(fonts/Lato-Semibold.ttf); }
-@font-face {
-  font-family: "Lato-Bold", sans-serif;
-  src: url(fonts/Lato-Bold.ttf); }
-@font-face {
-  font-family: "Lato-Black", sans-serif;
-  src: url(fonts/Lato-Black.ttf); }
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 @font-face {
   font-family: "BebasNeueBold", sans-serif;
   src: url(fonts/BebasNeueBold.ttf); }
