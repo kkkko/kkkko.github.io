@@ -9,18 +9,24 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link href="css/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,400,700,900" rel="stylesheet">
+  <script src="js/wow.min.js"></script>
 </head>
 <body>
+
+  <script>
+    new WOW().init();
+  </script>
 
   <header>  
     <div class="container header__container">
       <div class="row header__row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <a href="#" class="header__logo delay-0_5s">
+          <a href="#" class="header__logo wow fadeInDown delay-0_5s">
           	<span class="logo__part-top">Cab<span class="header__logo_up">HUB</span></span><br>
           	<span class="header__logo_under">Call And relex</span>
           </a>
-          <ul id="menu" class="header__nav-bar-menu delay-1s">
+          <ul id="menu" class="header__nav-bar-menu wow fadeInDown delay-1s">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Features</a></li>
@@ -37,11 +43,11 @@
     <div class="container top__container">
       <div class="row top__row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <h1 class="top__title delay-1s">Book Cab Now</h1 >
-          <p><span class="top__number delay-1s">+123 4567 8900</span><br>
-          	 <span class="top__url delay-1s">w w w . p s d f r e e b i e s . c o m </span>
+          <h1 class="top__title wow fadeIn delay-1s">Book Cab Now</h1 >
+          <p><span class="top__number wow fadeIn delay-1s">+123 4567 8900</span><br>
+          	 <span class="top__url wow fadeIn delay-1s">w w w . p s d f r e e b i e s . c o m </span>
           </p>
-          <img src="css/img/car-big.png" alt="" class="car-big delay-2s">
+          <img src="css/img/car-big.png" alt="" class="car-big wow fadeInLeft delay-2s">
         </div>
       </div>
     </div>
@@ -51,12 +57,12 @@
     <div class="container about__container">
       <div class="row justify-content-between about__row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-          <h3 class="about__title about__title_top delay-0_5s">Best in city</h3>
-          <h2 class="about__title about__title_bottom delay-1s">Trusted cab services in new york</h2>
-          <p class="about__text delay-1_5s">Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur dapibus pulvinar, sapien eros sodales ante, euismod aliquet nulla metus a mauris.Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur dapibus pulvinar, sapien eros sodales ante, euismod aliquet nulla metus a mauris.</p>
-          <a href="#" class="btn about__btn delay-2s">Read More</a>
+          <h3 class="about__title about__title_top wow fadeInDown delay-0_5s">Best in city</h3>
+          <h2 class="about__title about__title_bottom wow fadeInDown delay-1s">Trusted cab services in new york</h2>
+          <p class="about__text wow fadeInDown delay-1_5s">Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur dapibus pulvinar, sapien eros sodales ante, euismod aliquet nulla metus a mauris.Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur dapibus pulvinar, sapien eros sodales ante, euismod aliquet nulla metus a mauris.</p>
+          <a href="#" class="btn about__btn wow fadeInDown delay-2s">Read More</a>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 booking delay-1_5s">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 booking wow fadeInUp delay-1_5s">
           <h3 class="booking-form__title">Book a <span>car</span></h3>
           <form class="booking-form">
           	<div class="booking__input">
@@ -77,7 +83,7 @@
 
   <div class="tariffs-wrapper">
     <div class="container tariffs__container">
-      <div class="row container-name">
+      <div class="row container-name wow fadeInDown">
       	<div class="col-xl-12">
       	  <h2><span>Our</span><br>
       	  	  tariffs
@@ -85,7 +91,7 @@
         </div>
       </div>
       <div class="row justify-content-center tariffs__row">
-        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 tariffs-col economy__class delay-0_5s">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 tariffs-col economy__class wow fadeInLeftSmall delay-0_5s">
           <div class="tariffs-content">
           	<img src="css/img/car-small.png" alt="">
             <h3>Economy class</h3>
@@ -95,7 +101,7 @@
             <a href="#" class="btn tariffs__btn">Read more</a>
           </div>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 tariffs-col standard__class delay-0_5s">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 tariffs-col standard__class wow fadeInDownSmall delay-0_5s">
           <img src="css/img/car-small.png" alt="">
           <div class="tariffs-content">
             <h3>Standard class</h3>
@@ -105,7 +111,7 @@
             <a href="#" class="btn tariffs__btn">Read more</a>
           </div>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 tariffs-col business__class delay-0_5s">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 tariffs-col business__class wow fadeInRightSmall delay-0_5s">
           <img src="css/img/car-small.png" alt="">
           <div class="tariffs-content">
             <h3>Business class</h3>
@@ -121,7 +127,7 @@
 
   <div class="advantages-wrapper">
     <div class="container advantages__container">
-      <div class="row container-name">
+      <div class="row container-name wow fadeInDown">
       	<div class="col-xl-12">
       	  <h2><span>We do best</span><br>
       	  	  Than you wish
@@ -130,13 +136,13 @@
       </div>
       <div class="row justify-content-between advantages__row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 advantages-col">
-          <div class="advantages-content advantages-content-left delay-0_5s">
+          <div class="advantages-content advantages-content-left wow fadeInLeft delay-0_5s">
           	<img src="css/img/star.png" alt="">
             <h3>Home pickup</h3>
             <p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur.
             </p>
           </div>
-          <div class="advantages-content advantages-content-left delay-1s">
+          <div class="advantages-content advantages-content-left wow fadeInLeft delay-1s">
           	<img src="css/img/castle.png" alt="">
             <h3>Bonuses for ride</h3>
             <p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur.
@@ -144,13 +150,13 @@
           </div>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 advantages-col">
-          <div class="advantages-content advantages-content-right delay-0_5s">
+          <div class="advantages-content advantages-content-right wow fadeInRight delay-0_5s">
           	<img src="css/img/hourglass.png" alt="">
             <h3>Fast booking</h3>
             <p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur.
             </p>
           </div>
-          <div class="advantages-content advantages-content-right delay-1s">
+          <div class="advantages-content advantages-content-right wow fadeInRight delay-1s">
           	<img src="css/img/gear.png" alt="">
             <h3>GPS searching</h3>
             <p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur.
@@ -160,7 +166,7 @@
       </div>
       <div class="row">
       	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-      	  <a href="#" class="btn advantages__btn delay-1_5s">Read more</a>
+      	  <a href="#" class="btn advantages__btn wow fadeInUp delay-1_5s">Read more</a>
       	</div>
       </div>
     </div>
@@ -168,7 +174,7 @@
 
   <div class="apps-wrapper">
     <div class="container apps__container">
-      <div class="row container-name">
+      <div class="row container-name wow fadeInDown">
       	<div class="col-xl-12">
       	  <h2><span>Download</span><br>
       	  	  Best cub servies
@@ -177,15 +183,15 @@
       </div>
       <div class="row justify-content-between apps__row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 apps_left">
-          <h2 class="delay-0_5s">Download the Cab voucher app free!
+          <h2 class="wow fadeInDown delay-0_5s">Download the Cab voucher app free!
 			     Get Exciting New Offers
 		      </h2>
-		      <p class="delay-1s">Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus 	hendrerit, massa efficitur.
+		      <p class="wow fadeInDown delay-1s">Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus 	hendrerit, massa efficitur.
 		      </p>
-		      <a href="#" class="btn google__btn"><img src="css/img/google-play.png" alt="" class="delay-1_5s"></a>
-		      <a href="#" class="btn ios__btn"><img src="css/img/app-store.png" alt="" class="delay-1s"></a>
+		      <a href="#" class="btn google__btn"><img src="css/img/google-play.png" alt="" class="wow fadeInLeft delay-1_5s"></a>
+		      <a href="#" class="btn ios__btn"><img src="css/img/app-store.png" alt="" class="wow fadeInLeft delay-1s"></a>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 apps_right delay-1s">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 apps_right wow fadeInRight delay-1s">
           <img src="css/img/phone.png" alt="">
         </div>
       </div>
@@ -194,7 +200,7 @@
 
   <div class="clients-wrapper">
     <div class="container clients__container">
-      <div class="row container-name">
+      <div class="row container-name wow fadeInDown">
       	<div class="col-xl-12">
       	  <h2><span>Happy client's</span><br>
       	  	  Testimonials
@@ -202,7 +208,7 @@
         </div>
       </div>
       <div class="row justify-content-between clients__row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 clients-left delay-0_5s">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 clients-left wow fadeInLeft delay-0_5s">
           <div class="clients-testimonial">
 		  	    <p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus 		hendrerit, massa efficitur.
 		  	    </p>
@@ -211,7 +217,7 @@
 		  	    <h4>Business man</h4>
 		      </div>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 clients-right delay-0_5s">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 clients-right wow fadeInRight delay-0_5s">
           <div class="clients-testimonial">
 		  	    <p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus 		hendrerit, massa efficitur.
 		  	    </p>
@@ -228,8 +234,8 @@
     <div class="container call__container">
       <div class="row call__row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <h3>We are Ready to Take Your Call 24 Hours, 7 Days!</h3>
-          <h2 class="delay-0_5s">+123 4567 8900</h2>
+          <h3 class="wow fadeIn">We are Ready to Take Your Call 24 Hours, 7 Days!</h3>
+          <h2 class="wow pulse delay-0_5s">+123 4567 8900</h2>
         </div>
       </div>
     </div>
@@ -238,7 +244,7 @@
   <div class="bottom-wrapper">
     <div class="container bottom__container">
       <div class="row bottom__row">
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 bottom-col bottom-col-left">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 bottom-col bottom-col-left wow fadeInLeft">
           <h2>About cab hub</h2>
           <hr>
           <p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur.Quisque sollicitudin feugiat risus, eu posuere ex euismod eu.</p>
@@ -259,7 +265,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 bottom-col bottom-col-center delay-0_5s">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 bottom-col bottom-col-center wow fadeIn delay-0_5s">
           <h2>Download</h2>
           <hr>
           <p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit.</p>
@@ -274,7 +280,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 bottom-col bottom-col-right">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 bottom-col bottom-col-right wow fadeInRight">
           <h2>Contact</h2>
           <hr>
           <div class="contact-btn">
@@ -317,9 +323,6 @@
   <script src="js/jquery-2.1.3.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/waypoints.min.js"></script>
-  <script src="js/animate-css.js"></script>
-  <script src="js/common.js"></script>
 
 </body>	
 </html>

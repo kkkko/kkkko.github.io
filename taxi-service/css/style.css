@@ -17,7 +17,6 @@ html {
 @media (max-width: 568px) {
   html {
     font-size: 60%; } }
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 @font-face {
   font-family: "BebasNeueBold", sans-serif;
   src: url(fonts/BebasNeueBold.ttf); }
