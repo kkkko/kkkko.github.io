@@ -295,6 +295,7 @@ header {
           font-size: 1.875rem;
           line-height: 1.875rem;
           font-family: "BebasNeueBold", fantasy;
+          font-weight: 400;
           background-color: #ffc61a; }
         .tariffs-wrapper .tariffs__container .tariffs__row .tariffs-col a:hover {
           color: #000000;
