@@ -56,7 +56,8 @@ html {
   background-color: #000000;
   border-radius: 5px;
   -webkit-border-radius: 5px;
-  -moz-border-radius: 5px; }
+  -moz-border-radius: 5px;
+  letter-spacing: -0.1rem; }
 
 .btn:focus {
   outline: none;
@@ -187,6 +188,8 @@ header {
     font-size: 1.125rem;
     line-height: 1.425rem;
     font-weight: 400; }
+  .about-wrapper .about__container .about__row .about__btn {
+    letter-spacing: -0.1rem; }
   .about-wrapper .about__container .about__row a:hover {
     color: #000000;
     background-color: #ffffff; }
@@ -237,7 +240,9 @@ header {
     .about-wrapper .about__container .about__row .booking-form .booking-form__btn {
       display: block;
       width: 90%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      letter-spacing: -0.05rem;
+      font-stretch: ultra-condensed; }
     .about-wrapper .about__container .about__row .booking-form a:hover {
       color: #000000;
       background-color: #ffc61a; }
@@ -249,6 +254,8 @@ header {
     padding-bottom: 8%; }
     .tariffs-wrapper .tariffs__container .container-name {
       margin-bottom: 12%; }
+    .tariffs-wrapper .tariffs__container .container-name span {
+      font-size: 1.8rem; }
     .tariffs-wrapper .tariffs__container .tariffs__row {
       text-align: center; }
       .tariffs-wrapper .tariffs__container .tariffs__row .tariffs-col {
@@ -293,8 +300,8 @@ header {
           color: #000000;
           font-size: 1.875rem;
           line-height: 1.875rem;
-          font-family: "BebasNeueBold", fantasy;
-          font-weight: 400;
+          font-family: "BebasNeueBold", sans-serif;
+          font-weight: 700;
           background-color: #ffc61a; }
         .tariffs-wrapper .tariffs__container .tariffs__row .tariffs-col a:hover {
           color: #000000;
@@ -326,10 +333,13 @@ header {
     .advantages-wrapper .advantages__container .container-name {
       margin-bottom: 10.7%;
       color: #ffffff; }
+    .advantages-wrapper .advantages__container .container-name span {
+      font-size: 1.7rem; }
     .advantages-wrapper .advantages__container .advantages__row .advantages-col {
       max-width: 485px; }
       .advantages-wrapper .advantages__container .advantages__row .advantages-col .advantages-content {
-        margin-bottom: 4rem; }
+        margin-bottom: 4rem;
+        text-align: left; }
         .advantages-wrapper .advantages__container .advantages__row .advantages-col .advantages-content img {
           float: left;
           margin-right: 35px; }
@@ -360,6 +370,8 @@ header {
   padding-top: 5%; }
   .apps-wrapper .container-name {
     margin-bottom: 4%; }
+  .apps-wrapper .container-name span {
+    font-size: 1.8rem; }
   .apps-wrapper .apps__row .apps_left {
     padding-top: 4%; }
     .apps-wrapper .apps__row .apps_left h2 {
@@ -393,6 +405,8 @@ header {
   color: #ffffff; }
   .clients-wrapper .container-name {
     margin-bottom: 4%; }
+  .clients-wrapper .container-name span {
+    font-size: 1.5rem; }
   .clients-wrapper .clients__row .clients-testimonial {
     padding: 7% 7%;
     background-color: #000000;
