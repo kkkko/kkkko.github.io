@@ -20,6 +20,12 @@ html {
 @font-face {
   font-family: "BebasNeueBold", sans-serif;
   src: url(fonts/BebasNeueBold.ttf); }
+  @font-face {
+  font-family: "BebasNeueBold", sans-serif;
+  src: url(fonts/BebasNeueBold.otf); }
+  @font-face {
+  font-family: "BebasNeueBold", sans-serif;
+  src: url(fonts/BebasNeueBold.woff); }
 .delay-0_5s {
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
