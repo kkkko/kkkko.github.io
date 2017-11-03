@@ -19,13 +19,13 @@ html {
     font-size: 60%; } }
 @font-face {
   font-family: "BebasNeueBold", sans-serif;
-  src: url(fonts/BebasNeueBold.ttf); }
+  src: url(fonts/BebasNeueBold.ttf) format('truetype'); }
   @font-face {
   font-family: "BebasNeueBold", sans-serif;
-  src: url(fonts/BebasNeueBold.otf); }
+  src: url(fonts/BebasNeueBold.otf) format('otf'); }
   @font-face {
   font-family: "BebasNeueBold", sans-serif;
-  src: url(fonts/BebasNeueBold.woff); }
+  src: url(fonts/BebasNeueBold.woff) format('woff'); }
 .delay-0_5s {
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
