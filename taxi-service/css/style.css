@@ -50,6 +50,10 @@ html {
   -o-animation-delay: 2s;
   animation-delay: 2s; }
 
+.form-control:focus {
+  border-color: #e4e4e4;
+  box-shadow: none;
+}
 .btn {
   padding: 15px 35px;
   font-family: "BebasNeueBold", sans-serif, sans-serif;
