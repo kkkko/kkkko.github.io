@@ -47,6 +47,16 @@ function menSlideNumberHide () {
   	menSlideNumber[i].classList.add("hidden");
   }
 }
+function menTitleMargin () {
+  for (var i = 0; i < menTitle.length; i++){
+  	menTitle[i].style.marginTop="-5%";
+  }
+}
+function menSlideNumberMargin () {
+  for (var i = 0; i < menSlideNumber.length; i++){
+  	menSlideNumber[i].style.bottom="-65%";
+  }
+}
 
 
 function womenSocialShow () {
@@ -79,10 +89,20 @@ function womenSlideNumberHide () {
   	womenSlideNumber[i].classList.add("hidden");
   }
 }
+function WomenTitleMargin () {
+  for (var i = 0; i < womenTitle.length; i++){
+  	womenTitle[i].style.marginTop="-5%";
+  }
+}
+function WomenSlideNumberMargin () {
+  for (var i = 0; i < womenSlideNumber.length; i++){
+  	womenSlideNumber[i].style.bottom="-65%";
+  }
+}
 
 
 bannerMen.onmouseover = function shomMen (event) {
-	bannerMen.style.maxHeight="85vh";
+	bannerMen.style.transform="scaleY(1.1)";
 	bannerMen.style.left="5%";
 	bannerMen.style.opacity="1";
 	bannerMen.style.zIndex="20";
@@ -93,7 +113,7 @@ bannerMen.onmouseover = function shomMen (event) {
 }
 
 bannerMen.onmouseout = function hideMen (event) {
-	bannerMen.style.maxHeight="80vh";
+	bannerMen.style.transform="scaleY(1)";
 	bannerMen.style.left="0%";
 	bannerMen.style.opacity="0.5";
 	bannerMen.style.zIndex="1";
@@ -104,7 +124,7 @@ bannerMen.onmouseout = function hideMen (event) {
 }
 
 bannerWomen.onmouseover = function (event) {
-	bannerWomen.style.maxHeight="85vh";
+	bannerWomen.style.transform="scaleY(1.1)";
 	bannerWomen.style.right="5%";
 	bannerWomen.style.opacity="1";
 	bannerWomen.style.zIndex="10";
@@ -115,7 +135,7 @@ bannerWomen.onmouseover = function (event) {
 }
 
 bannerWomen.onmouseout = function (event) {
-	bannerWomen.style.maxHeight="80vh";
+	bannerWomen.style.transform="scaleY(1)";
 	bannerWomen.style.right="0";
 	bannerWomen.style.opacity="0.5";
 	bannerMen.style.zIndex="1";
@@ -126,18 +146,21 @@ bannerWomen.onmouseout = function (event) {
 }
 
 bannerMen.onclick = function (event) {
-	bannerMen.style.left="50%";
+	bannerMen.style.minWidth="100%";
+	bannerMen.style.left="30%";
 	bannerMen.style.opacity="1";
 	bannerMen.style.transition="1s";
 	menIndicators.style.left="0";
+	menTitleMargin();
+	menSlideNumberMargin();
 	bannerMen.onmouseout = function (event) {
-		bannerMen.style.left="50%";
+		bannerMen.style.left="30%";
 		bannerMen.style.opacity="1";
 		bannerMen.style.transition="1s";
 		menIndicators.style.left="0";
 	}
 	bannerMen.onmouseover = function (event) {
-		bannerMen.style.left="50%";
+		bannerMen.style.left="30%";
 		bannerMen.style.opacity="1";
 		bannerMen.style.transition="1s";
 		menIndicators.style.left="0";
@@ -145,18 +168,21 @@ bannerMen.onclick = function (event) {
 }
 
 bannerWomen.onclick = function (event) {
-	bannerWomen.style.right="50%";
+	bannerWomen.style.minWidth="100%";
+	bannerWomen.style.right="30%";
 	bannerWomen.style.opacity="1";
 	bannerWomen.style.transition="1s";
 	womenIndicators.style.right="0";
+	WomenTitleMargin();
+	WomenSlideNumberMargin();
 	bannerWomen.onmouseout = function (event) {
-		bannerWomen.style.right="50%";
+		bannerWomen.style.right="30%";
 		bannerWomen.style.opacity="1";
 		bannerWomen.style.transition="1s";
 		womenIndicators.style.right="0";
 	}
 	bannerWomen.onmouseover = function (event) {
-		bannerWomen.style.right="50%";
+		bannerWomen.style.right="30%";
 		bannerWomen.style.opacity="1";
 		bannerWomen.style.transition="1s";
 		womenIndicators.style.right="0";

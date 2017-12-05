@@ -1,3 +1,9 @@
+@media (max-width: 1366px) {
+  .top__brands-list ul li {
+    width: 19%; }
+    .top__brands-list ul li a img {
+      height: 5%; } }
+
 @media (max-width: 1200px) {
   .top {
     padding-bottom: 1.5%; }
