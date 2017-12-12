@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "TheSansYotaW5Plain", sans-serif;
+  src: url(fonts/TheSansYota-W5Plain.otf) format("otf");
+}
+@font-face {
+  font-family: "TheSansYotaW7Bold", sans-serif;
+  src: url(fonts/TheSansYota-W7Bold.otf) format("otf");
+}
+body {
+	background: url("img/bg.jpg") no-repeat top center;
+	background-position: 0;
+	background-color: #000000;
+	color: #ffffff;
+	box-sizing: border-box;
+}
+.page-name {
+	max-width: 680px;
+	padding-top: 6.25%;
+	padding-bottom: 5.47%;
+  text-align: center;
+	.page-name-img {
+		max-width: 100%;
+		max-height: 94px;
+	}
+  .page-name-img-post {
+  	width: 49px;
+  	height: 49px;
+  	margin-top: -55px;
+  }
+}
+.page-dscp {
+	max-width: 940px;
+	margin-bottom: 4.3%;
+	text-align: left;
+	p {
+		margin-bottom: 2%;
+		font-family: "TheSansYotaW5Plain", sans-serif;
+		font-size: 28px;
+		line-height: 40px;
+	}
+}
+.carousel-inner {
+	max-width: 930px;
+	max-height: 520px;
+	margin: 0 auto;
+	margin-bottom: 6.25%;
+}
+.carousel-indicators {
+	bottom: -47px;
+	li {
+		width: 10px;
+		height: 10px;
+		color: #555454;
+		border-radius: 50%;
+	}
+}
+.carousel-control-prev {
+	left: 5%;
+	width: 26px;
+}
+.carousel-control-next {
+	right: 5%;
+	width: 26px;
+}
+.carousel-control-prev-icon {
+	width: 26px;
+	height: 51px;
+	background-image: url("img/prev.png"); 
+}
+.carousel-control-next-icon {
+	width: 26px;
+	height: 51px;
+	background-image: url("img/next.png"); 
+}
+.yours-yota {
+	margin-bottom: 8.4%;
+	padding-left: 7%;
+	a {
+		font-family: "TheSansYotaW7Bold", sans-serif;
+		font-size: 28px;
+		color: #00aeef;
+	}
+}
+.yours-yota a:hover {
+	text-decoration: none;
+	color: #00aeef;
+}
