@@ -1,0 +1,305 @@
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+@media (min-width: 1366px) {
+	.collection-slider {
+		.carousel-item {
+			.inner-img {
+				img {
+					max-width: 85%;
+					margin-left: 5%;
+				}
+			}
+			.border {
+				width: 85%;
+				left: 10%;
+			}
+		}
+	}
+	.shop-popup {
+		left: -89%;
+	}
+}
+
+@media (max-width: 1366px) {
+	.top__brands-list ul li {
+		width: 19%;
+		a {
+			img {
+				height: 5%;
+			}
+		}
+	}
+}
+
+@media (max-width: $xl) {
+	.top {
+		padding-bottom: 1.5%;
+	}
+	.top__brands-list {
+		order: -1;
+	}
+	.top__user-menu {
+		order: -1;
+	}
+	.shop-popup {
+		left: -99%;
+		font-size: 80%;
+	}
+}
+
+@media (max-width: $lg) {
+	.top__brands-list {
+		order: -1;
+	}
+	.top__user-menu {
+		order: -1;
+	}
+	.collection-slider {
+		.inner-info {
+			padding-bottom: 5%;
+		}
+		.carousel-item {
+			.border {
+				height: 65%;
+				bottom: 25%;
+			}
+		}
+	}
+	.slicker-look-parts {
+		.link {
+			width: 60%;
+		}
+		a {
+			padding-top: 5%;
+			padding-bottom: 5%;
+			font-size: 1.2rem;
+		}
+		.fa {
+			margin-top: 7%;
+		}
+  }
+	.shop-img {
+		min-height: auto;
+		max-height: 100%;
+	}
+	.shop-popup {
+		max-height: 100%;
+		left: auto;
+		right: -100%;
+	}
+}
+
+@media (max-width: $md) {
+	.top__user-menu {
+		text-align: center;
+	}
+	.top__banner_men {
+		display: none;
+	}
+	.top__banner_women {
+		width: 100%;
+		height: 50vh;
+		right: 0;
+	}
+	.collection-slider {
+		.inner-img {
+			margin-top: 50%;
+		}
+		.carousel-item {
+			.border {
+				height: 45%;
+				bottom: 20%;
+			}
+		}
+	}
+	.slicker-look {
+		padding-left: 5%;
+		text-align: center;
+	}
+	.slicker-look-title,
+	.slicker-look-dscp,
+	.explore-btn {
+		max-width: 100%;
+	}
+	.slicker-look-parts .link {
+		width: auto;
+	}
+	.slicker-look-parts .link .fa {
+		float: none;
+		margin-left: 5%;
+	}
+	.slicker-img-wrapper {
+		order: -1;
+	}
+	.outfit-img {
+		margin-top: 15%;
+	}
+	.outfit-info {
+		width: auto;
+	}
+	.shop-popup {
+		padding: 5% 15%;
+		right: -98%;
+		font-size: 60%;
+		h4 {
+			margin-top: 10px;
+			margin-bottom: 1rem;
+		}
+		.to-shop-btn {
+			margin-top: 2rem;
+			padding: 5%;
+		}
+	}
+	.footer {
+		.row {
+			text-align: center;
+		}
+		address {
+			margin-top: 2%;
+			text-align: center;
+		}
+		ul {
+			li {
+				a {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+	.subscribe {
+		text-align: center;
+		p {
+			max-width: none;
+		}
+		input {
+			width: 65%;
+			margin: 0 auto;
+			margin-top: 5%;
+			margin-bottom: 10%;
+		}
+	}
+	.contacts-site-map {
+		.contacts {
+			ul {
+				margin-top: 9.5%;
+				margin-bottom: 9.5%;
+				text-align: center;
+			}
+		}
+	}
+	.site-map {
+		text-align: center;
+		.bottom-help {
+			margin: 0;
+		}
+		.bottom-shop {
+			margin: 0;
+		}
+		.bottom-order {
+			margin: 0;
+		}
+	}
+}
+
+@media (max-width: $sm) {
+	html {
+		font-size: 70%;
+	}
+	.top__user-menu {
+		padding-left: 40px;
+	}
+	.ui {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.top__banner-title {
+		font-size: 2rem;
+	}
+	.collection-slider {
+		.inner-img {
+			margin-top: 0;
+		}
+		.carousel-item {
+			.border {
+				display: none;
+			}
+		}
+	}
+	.left-rotate {
+		display: none;
+	}
+	.shop-card:hover > .shop-img {
+		min-height: auto;
+		top: 0;
+	}
+	.shop-popup {
+		width: 100%;
+		height: 100%;
+		min-height: auto;
+		padding: 5% 15%;
+		font-size: 100%;
+		top: 0;
+		left: 0!important;
+		right: auto;
+		h4 {
+			margin-top: 10px;
+			margin-bottom: 1rem;
+		}
+		.to-shop-btn {
+			margin-top: 2rem;
+			padding: 5%;
+		}
+	}
+	.subscribe {
+		text-align: center;
+		p {
+			max-width: none;
+		}
+		input {
+			width: 65%;
+			margin: 0 auto;
+			margin-top: 5%;
+			margin-bottom: 10%;
+		}
+	}
+	.contacts-site-map {
+		.contacts {
+			ul {
+				margin-top: 9.5%;
+				margin-bottom: 9.5%;
+				text-align: center;
+			}
+		}
+	}
+	.site-map {
+		text-align: center;
+		.bottom-help {
+			margin: 0;
+		}
+		.bottom-shop {
+			margin: 0;
+		}
+		.bottom-order {
+			margin: 0;
+		}
+	}
+}
+@media (max-width: 440px) {
+	.site-map {
+		.bottom-order {
+			margin-top: 10%;
+		}
+	}
+	.shop-card:hover > .shop-img {
+		position: static;
+		cursor: pointer;
+	}
+	.shop-card:hover > .shop-popup {
+		display: none;
+	}
+}
