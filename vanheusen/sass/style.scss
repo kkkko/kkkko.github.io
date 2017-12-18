@@ -797,4 +797,25 @@ p, h1, h2, h3, h4, h5, h6 {
  	}
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .top__banner_men {
+    left: -10%;
+  }
+  .top__banner_women {
+    right: 10%;
+  }
+  .top__banner_men-hover {
+    left: -5%;
+  }
+  .top__banner_women-hover {
+    right: 15%;
+  }
+  .top__banner_men-all-width {
+    left: 0%;
+  }
+  .top__banner_women-all-width {
+    right: 60%;
+  }
+}
+
 @import "media.scss";
