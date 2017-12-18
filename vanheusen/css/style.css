@@ -1,3 +1,6 @@
+@import url(../css/normalize.css);
+@import url(../css/grid.css);
+@import url(../css/bootstrap.min.css);
 body {
   max-width: 1600px;
   margin: 0 auto;
