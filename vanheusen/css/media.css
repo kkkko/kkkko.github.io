@@ -24,15 +24,13 @@
     left: -89%; } }
 
 @media (min-width: 1600px) {
-  .top-banners {
-    overflow-x: hidden; }
-    .top-banners .top__banner ul {
-      margin-top: 8.2%;
-      margin-bottom: 14.5%; }
-    .top-banners .slide-number {
-      bottom: -65%; }
-    .top-banners .top__banner_women .slide-number {
-      bottom: -65%; }
+  .top-banners .top__banner ul {
+    margin-top: 8.2%;
+    margin-bottom: 14.5%; }
+  .top-banners .slide-number {
+    bottom: -65%; }
+  .top-banners .top__banner_women .slide-number {
+    bottom: -65%; }
   .top__banner_men-all-width {
     max-height: 800px; }
   .top__banner_women-all-width {
