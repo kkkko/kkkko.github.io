@@ -135,17 +135,20 @@ bannerWomen.onmouseout = function (event) {
 }
 
 bannerMen.onclick = function (event) {
+  bannerWomen.style.visibillity="hidden";
   bannerMen.classList.remove("top__banner_men-hover");
 	bannerMen.classList.add("top__banner_men-all-width");
 	menIndicators.style.left="0";
 	menTitleMargin();
 	menSlideNumberMargin();
 	bannerMen.onmouseout = function (event) {
+    bannerWomen.style.visibillity="hidden";
 		bannerMen.classList.remove("top__banner_men-hover");
     bannerMen.classList.add("top__banner_men-all-width");
 		menIndicators.style.left="0";
 	}
 	bannerMen.onmouseover = function (event) {
+    bannerWomen.style.visibillity="hidden";
 		bannerMen.classList.remove("top__banner_men-hover");
     bannerMen.classList.add("top__banner_men-all-width");
 		menIndicators.style.left="0";
@@ -153,17 +156,20 @@ bannerMen.onclick = function (event) {
 }
 
 bannerWomen.onclick = function (event) {
+  bannerMen.style.visibillity="hidden";
 	bannerWomen.classList.remove("top__banner_women-hover");
   bannerWomen.classList.add("top__banner_women-all-width");
 	womenIndicators.style.right="0";
 	WomenTitleMargin();
 	WomenSlideNumberMargin();
 	bannerWomen.onmouseout = function (event) {
+    bannerMen.style.visibillity="hidden";
 		bannerWomen.classList.remove("top__banner_women-hover");
     bannerWomen.classList.add("top__banner_women-all-width");
 		womenIndicators.style.right="0";
 	}
 	bannerWomen.onmouseover = function (event) {
+    bannerMen.style.visibillity="hidden";
 		bannerWomen.classList.remove("top__banner_women-hover");
     bannerWomen.classList.add("top__banner_women-all-width");
 		womenIndicators.style.right="0";
@@ -177,6 +183,6 @@ function scrollTo(element) {
   });
 }
 
-document.getElementById("carouselExampleIndicators").addEventListener('click', () => {
+document.getElementById("carouselExampleIndicators").addEventListener('click', function () {
   scrollTo(document.getElementById("men"));
 });

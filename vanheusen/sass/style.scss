@@ -1,5 +1,7 @@
 
 body {
+	max-width: 1600px;
+	margin: 0 auto;
   transition: all 0.7s ease;
   overflow-x: hidden;
 }
@@ -191,10 +193,12 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  // overflow-x: hidden;
 }
 .top__banner {
 	min-width: 60%;
-	height: 80vh;
+	max-height: 50%;
+	// overflow-x: hidden;
 	position: relative;
 	top: 0%;
 	text-align: right;
@@ -216,6 +220,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	.carousel-indicators	li {
 		width: 7px;
 		height: 7px;
+    margin: 0 7.5px;
 		border-radius: 50%;
 		transform: none;
 		&.active {
@@ -233,8 +238,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .slide-number {
 	position: absolute;
-	right: 6%;
-	bottom: -85%;
+	right: 7.8%;
+	bottom: -80%;
 	color: #ffffff;
 	font-style: italic;
 	transform: none;
@@ -249,7 +254,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	background: url(img/mens-collection-img.jpg) no-repeat top center;
 	background-size: cover;
 	.carousel-indicators {
-		left: 40%;
+		left: 0%;
 	}
 } 
 .top__banner_men-hover {
@@ -266,6 +271,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	z-index: 20;
 }
 .top__banner_women {
+	right: 0;
 	opacity: 0.5;
 	transition: all 0.5s ease;
 	text-align: left;
@@ -273,7 +279,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	background-color: #d0c2c3;
 	background-size: cover;
 	.carousel-indicators {
-		right: 40%;
+		right: 0%;
 	}
 	.top__banner-title {
 		margin-right: 0;
@@ -289,7 +295,8 @@ p, h1, h2, h3, h4, h5, h6 {
 		}
 	}
 	.slide-number {
-		left: 6%;
+    bottom: -80%;
+		left: 7.8%;
 	}
 }
 .top__banner_women-hover {
@@ -481,6 +488,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	font-size: 1.8rem;
 	font-weight: 700;
 	font-family: 'EB Garamond', serif;
+	color: #38424b;
 }
 .slicker-look-dscp {
 	max-width: 60%;
@@ -551,6 +559,7 @@ p, h1, h2, h3, h4, h5, h6 {
 		font-size: 2rem;
 		font-weight: 700;
 		font-family: 'EB Garamond', serif;
+		color: #38424b;
 	}
 	.outfit-btn {
 		display: inline-block;
