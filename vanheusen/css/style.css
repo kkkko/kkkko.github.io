@@ -776,22 +776,6 @@ p, h1, h2, h3, h4, h5, h6 {
     font-style: normal;
     color: #404040; }
 
-@media (max-width: 1366px) {
-  .top-banners .top__banner {
-    max-height: 547px; } }
-
-@media (min-width: 1366px) {
-  .top__brands-list ul li {
-    max-width: 95px; }
-  .collection-slider .carousel-item .inner-img img {
-    max-width: 85%;
-    margin-left: 5%; }
-  .collection-slider .carousel-item .border {
-    width: 85%;
-    left: 10%; }
-  .shop-popup {
-    left: -89%; } }
-
 @media (min-width: 1441px) {
   .top-banners .top__banner {
     max-height: 800px; }
@@ -804,6 +788,18 @@ p, h1, h2, h3, h4, h5, h6 {
   .collection-slider .carousel-item .border {
     width: 80%;
     left: 19%; } }
+
+@media (min-width: 1366px) {
+  .top__brands-list ul li {
+    max-width: 95px; }
+  .collection-slider .carousel-item .inner-img img {
+    max-width: 85%;
+    margin-left: 5%; }
+  .collection-slider .carousel-item .border {
+    width: 85%;
+    left: 10%; }
+  .shop-popup {
+    left: -89%; } }
 
 @media (min-width: 1600px) {
   .top-banners {
@@ -818,13 +814,23 @@ p, h1, h2, h3, h4, h5, h6 {
   .top__banner_men-all-width {
     max-height: 800px; }
   .top__banner_women-all-width {
-    max-height: 800px; } }
+    max-height: 800px; }
+  .shop-popup {
+    left: -83%; } }
+
+@media (max-width: 1366px) {
+  .top-banners .top__banner {
+    max-height: 547px; } }
 
 @media (max-width: 1366px) {
   .top__brands-list ul li {
     width: 19%; }
     .top__brands-list ul li a img {
       height: 5%; } }
+
+@media (min-width: 2000px) {
+  .shop-popup {
+    left: -83.5%; } }
 
 @media (max-width: 1200px) {
   .top {

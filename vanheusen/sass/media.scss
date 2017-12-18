@@ -3,10 +3,29 @@ $lg: 992px;
 $md: 768px;
 $sm: 576px;
 
-@media(max-width: 1366px) {
+@media (min-width: 1441px) {
 	.top-banners {
 		.top__banner {
-			max-height: 547px;
+			max-height: 800px;
+			ul {
+				margin-bottom: 17.5%;
+			}
+		}
+		.top__banner-title {
+			font-size: 52px;
+		}
+	}
+	.collection-slider {
+		.carousel-item {
+			.inner-img {
+				img {
+					margin-left: 15%;
+				}
+			}
+			.border {
+				width: 80%;
+				left: 19%;
+			}
 		}
 	}
 }
@@ -36,32 +55,6 @@ $sm: 576px;
 		left: -89%;
 	}
 }
-@media (min-width: 1441px) {
-	.top-banners {
-		.top__banner {
-			max-height: 800px;
-			ul {
-				margin-bottom: 17.5%;
-			}
-		}
-		.top__banner-title {
-			font-size: 52px;
-		}
-	}
-	.collection-slider {
-		.carousel-item {
-			.inner-img {
-				img {
-					margin-left: 15%;
-				}
-			}
-			.border {
-				width: 80%;
-				left: 19%;
-			}
-		}
-	}
-}
 @media(min-width: 1600px) {
 	.top-banners {
 		overflow-x: hidden;
@@ -86,6 +79,16 @@ $sm: 576px;
 	.top__banner_women-all-width {
 		max-height: 800px;
 	}
+	.shop-popup {
+		left: -83%;
+	}
+}
+@media(max-width: 1366px) {
+	.top-banners {
+		.top__banner {
+			max-height: 547px;
+		}
+	}
 }
 @media (max-width: 1366px) {
 	.top__brands-list ul li {
@@ -95,6 +98,11 @@ $sm: 576px;
 				height: 5%;
 			}
 		}
+	}
+}
+@media(min-width: 2000px) {
+	.shop-popup {
+		left: -83.5%;
 	}
 }
 
