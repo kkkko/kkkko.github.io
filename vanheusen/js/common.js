@@ -175,6 +175,10 @@ bannerWomen.onclick = function (event) {
 		womenIndicators.style.right="0";
 	}
 }
+
+
+var marker = false;
+
 function scrollTo(element) {
   window.scroll({
     behavior: 'smooth',
@@ -182,7 +186,8 @@ function scrollTo(element) {
     top: element.offsetTop
   });
 }
-
 document.getElementById("carouselExampleIndicators").addEventListener('click', function () {
-  scrollTo(document.getElementById("men"));
+  if (!marker) {scrollTo(document.getElementById("men"));}
+  marker = true;
 });
+
