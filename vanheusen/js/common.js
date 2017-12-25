@@ -183,11 +183,10 @@ function scrollTo(element) {
   window.scroll({
     behavior: 'smooth',
     left: 0,
-    top: element.offsetTop
+    top: element.offsetTop + ( $(document).height() / 100 ) * 2.5 
   });
 }
 document.getElementById("carouselExampleIndicators").addEventListener('click', function () {
-  if (!marker) {scrollTo(document.getElementById("men"));}
+  if (!marker) {scrollTo(document.getElementById("man"));}
   marker = true;
 });
-
