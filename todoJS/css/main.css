@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif
+}
+body {
+  background-color: #b1ced4;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 10%
+}
+:focus {
+  outline: none
+}
+.todo-list-wrapper {
+  max-width: 410px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-size: cover;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+.todo-header {
+  margin-bottom: 20px;
+  z-index: 2
+}
+.todo-header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #545556
+}
+.btn {
+  width: 25px;
+  height: 25px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none
+}
+.btn:hover {
+  cursor: pointer
+}
+.add-task {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+.add-task input {
+  margin-right: 15px;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  outline: none
+}
+.btn-add-task {
+  margin-right: 10px;
+  background-image: url(../img/add.svg);
+  background-size: cover
+}
+.btn-delete-task, .btn-remove-text {
+  background-image: url(../img/trash.svg);
+  background-size: cover
+}
+.error {
+  margin-top: 3%;
+  padding-left: 12%;
+  text-align: left
+}
+.tasks-list ul {
+  margin: 0;
+  padding: 0 12%
+}
+.tasks-list .task {
+  margin-top: 7%;
+  text-align: left;
+  list-style: none
+}
+.btn-delete-task {
+  float: right
+}
+.btn-finish-task {
+  margin-right: 8px;
+  float: right;
+  background-image: url(../img/undone.svg);
+  background-size: cover
+}
+.btn-finish-task:hover {
+  background-image: url(../img/done.svg)
+}
