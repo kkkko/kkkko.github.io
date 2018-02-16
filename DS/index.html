@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title></title>
+	<title>DS</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
@@ -14,7 +14,7 @@
 	
 	<div class="menu-btn-wrap">
 		<img class="menu-btn" src="img/burger.png" alt="">
-		<p>Menu</p>
+		<p class="menu-text-btn">Menu</p>
 	</div>
 
 	<div class="logo">
@@ -45,11 +45,11 @@
 
 	<div class="social">
 		<img src="img/tm.png" alt="">
-		<a href="#">Write</a>
+		<a href="tg://resolve?domain=ds_s_l">Write</a>
 		<hr>
 	</div>
 
-	<div class="overlay">
+	<div id="overlay" class="overlay hide">
 		<img class="close-img" src="img/close.png." alt="">
 		<p class="close-btn">close menu</p>
 		<div class="overlay-menu">
@@ -76,14 +76,17 @@
 	<script type="text/javascript">
 
 		var showMenu = document.querySelector('.menu-btn-wrap');
+		var showMenuImg = document.querySelector('.menu-btn');
+		var showMenuText = document.querySelector('.menu-text-btn');
 		var closeMenu = document.querySelector('.close-btn');
 		var overlay = document.querySelector('.overlay');
 		var page = document.querySelector('.page');
 		var opinion = document.querySelector('.opinion');
+		var over = document.getElementById('overlay');
 
-		showMenu.onclick = function() {
-			overlay.classList.add('show');
-		}
+		// showMenu.onclick = function() {
+		// 	overlay.classList.add('show');
+		// }
 
 		closeMenu.onclick = function() {
 			overlay.classList.remove('show');
@@ -95,6 +98,20 @@
 
 		page.onmouseleave = function() {
 			opinion.classList.remove('opinion-show');
+		}
+
+		document.onclick = function(e) {
+			if (over.classList.contains('hide')) {
+				if (e.target==showMenu||e.target==showMenuText||e.target==showMenuImg) {
+					overlay.classList.add('show');
+					overlay.classList.remove('hide');
+				}
+			} else {
+				if (e.target!=overlay&&e.target!=overlay.children) {
+					overlay.classList.add('hide');
+					overlay.classList.remove('show');
+				}
+			}
 		}
 
 	</script>
