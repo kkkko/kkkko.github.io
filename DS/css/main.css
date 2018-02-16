@@ -170,6 +170,10 @@ hr {
 	font-weight: 300;
 }
 
+.close-btn:hover {
+	cursor: pointer;
+}
+
 .overlay-menu {
 	display: inline-block;
 	margin-left: 4.6vw;
@@ -215,6 +219,12 @@ hr {
 	}
 	.social {
 		bottom: 20px;
+	}
+	.overlay {
+		height: auto;
+	}
+	.menu-list ul {
+		margin-top: 2.8vh;
 	}
 }
 
