@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	
+	<div class="menu-btn-wrap">
+		<img class="menu-btn" src="img/burger.png" alt="">
+		<p>Menu</p>
+	</div>
+
+	<div class="logo">
+		<img class="logo-img" src="img/logo.png" alt="">
+		<p class="logo-text">
+			Other perceptions
+			of the product
+		</p>
+	</div>
+
+	<div class="page">
+		<h1 class="page-title">
+			Your
+			customers will
+			appreciate.
+		</h1>
+		<div class="langs">
+			<a class="active" href="#">eng</a>
+			<span>/</span>
+			<a href="#">рус</a>	
+		</div>
+		<div class="opinion">
+			<span>opinion</span>
+			<br>
+			<span class="years">2013 - 2017</span>
+		</div>
+	</div>
+
+	<div class="social">
+		<img src="img/tm.png" alt="">
+		<a href="#">Write</a>
+		<hr>
+	</div>
+
+	<div class="overlay">
+		<img class="close-img" src="img/close.png." alt="">
+		<p class="close-btn">close menu</p>
+		<div class="overlay-menu">
+			<div class="logo">
+				<img class="logo-img" src="img/logo-black.png" alt="">
+				<p class="logo-text">
+					Other perceptions
+					of the product
+				</p>
+			</div>
+			<div class="menu-list">
+				<ul>
+					<li><a href="#">Заказать сайт</a></li>
+					<li><a href="#">Похвалить/Поругать</a></li>
+					<li><a href="#">Посмотреть работы</a></li>
+					<li><a href="#">Увидеть крутых ребят</a></li>
+					<li><a href="#">Услышать голос менеджера</a></li>
+					<li><a href="#">Почитать больше</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var showMenu = document.querySelector('.menu-btn-wrap');
+		var closeMenu = document.querySelector('.close-btn');
+		var overlay = document.querySelector('.overlay');
+
+		showMenu.onclick = function() {
+			overlay.classList.add('show');
+		}
+
+		closeMenu.onclick = function() {
+			overlay.classList.remove('show');
+		}
+
+	</script>
+
+</body>
+</html>
