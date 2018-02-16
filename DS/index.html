@@ -78,6 +78,12 @@
 		var showMenu = document.querySelector('.menu-btn-wrap');
 		var closeMenu = document.querySelector('.close-btn');
 		var overlay = document.querySelector('.overlay');
+		var page = document.querySelector('.page');
+		var opinion = document.querySelector('.opinion');
+
+		overlay.onclick = function() {
+			console.log('okok');
+		}
 
 		showMenu.onclick = function() {
 			overlay.classList.add('show');
@@ -85,6 +91,14 @@
 
 		closeMenu.onclick = function() {
 			overlay.classList.remove('show');
+		}
+
+		page.onmouseenter = function() {
+			opinion.classList.add('opinion-show');
+		}
+
+		page.onmouseleave = function() {
+			opinion.classList.remove('opinion-show');
 		}
 
 	</script>
