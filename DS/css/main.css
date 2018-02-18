@@ -116,12 +116,12 @@ a.active {
 }
 
 .opinion-show {
-  transform: translate3d(5vw, 0px, 0px);
+	transform: translate3d(5vw, 0px, 0px);
 }
 
 .social {
 	position: absolute;
-	bottom: 8vh;
+	top: 87vh;
 	right: 0;
 }
 
@@ -228,9 +228,6 @@ hr {
 	.langs {
 		margin-top: 25vh;
 	}
-	.social {
-		bottom: 20px;
-	}
 	.overlay {
 		height: auto;
 	}
@@ -239,9 +236,25 @@ hr {
 	}
 }
 
+@media(max-width: 1281px) {
+	.social {
+		top: 85vh;
+	}
+}
+
 @media(max-width: 1025px) {
 	.page {
 		background-size: 65vw 100%;
+	}
+	.social {
+		top: 83vh;
+	}
+	.opinion {
+		margin-top: -20vh;
+		margin-left: 53.8vw;
+	}
+	.opinion-show {
+		transform: translate3d(16vw, 0px, 0px);
 	}
 }
 
@@ -289,8 +302,17 @@ hr {
 		top: 11vh;
 		right: 10vw;
 	}
+	.social {
+		top: 86vh;
+	}
 	.social a {
 		padding-right: 100px;
+	}
+	.opinion {
+		margin-top: 2vh;
+	}
+	.opinion-show {
+		transform: translate3d(6vw, 0px, 0px);
 	}
 }
 
