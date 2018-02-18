@@ -97,7 +97,7 @@ a.active {
 	z-index: -1;
 	margin-top: -7vh;
 	margin-left: 43.8vw;
-	transition: all 1.5s ease-out;
+	transition: all 1.5s ease-out, 10s z-index;
 }
 
 .opinion span {
@@ -117,6 +117,8 @@ a.active {
 
 .opinion-show {
 	transform: translate3d(5vw, 0px, 0px);
+	z-index: 1;
+	z
 }
 
 .social {
@@ -166,7 +168,6 @@ hr {
 .show {
 	transform: translate3d( 0px, 0px, 0px);
 }
-
 
 .close-img {
 	display: inline-block;
