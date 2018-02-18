@@ -234,6 +234,9 @@ hr {
 	.menu-list ul {
 		margin-top: 2.8vh;
 	}
+	.social {
+		top: 84vh;
+	}
 }
 
 @media(max-width: 1281px) {
