@@ -147,6 +147,12 @@ a.active {
 
 .word-show {
 	transition: all 1.5s ease-out, 10s z-index;
+	transform: translate3d(3vw, 0px, 0px);
+	z-index: 1;
+}
+
+.years-show {
+	transition: all 1.5s ease-out, 10s z-index;
 	transform: translate3d(5vw, 0px, 0px);
 	z-index: 1;
 }
