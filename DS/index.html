@@ -36,6 +36,9 @@
 			<span>/</span>
 			<a href="#">рус</a>	
 		</div>
+		<div class="test">
+			
+		</div>
 		<div class="opinion">
 			<span>opinion</span>
 			<br>
@@ -82,6 +85,7 @@
 		var overlay = document.querySelector('.overlay');
 		var page = document.querySelector('.page');
 		var opinion = document.querySelector('.opinion');
+		var test = document.querySelector('.test');
 		var over = document.getElementById('overlay');
 
 		// showMenu.onclick = function() {
@@ -92,11 +96,13 @@
 			overlay.classList.remove('show');
 		}
 
-		page.onmouseenter = function() {
+		test.onmouseenter = function() {
+			test.classList.add('test-show');
 			opinion.classList.add('opinion-show');
 		}
 
-		page.onmouseleave = function() {
+		test.onmouseleave = function() {
+			test.classList.remove('test-show');
 			opinion.classList.remove('opinion-show');
 		}
 
