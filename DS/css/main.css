@@ -92,16 +92,31 @@ a.active {
 	font-weight: 300;
 }
 
-.test {
+.wrap1 {
 	position: absolute;
 	width: 80px;
-	height: 50px;
+	height: 20px;
 	margin-top: -7vh;
 	margin-left: 47.8vw;
 	transition: all 1.5s ease-out, 10s z-index;
 }
 
-.test-show {
+.wrap1-show {
+	width: 150px;
+	transform: translate3d(0vw, 0px, 0px);
+	z-index: 1;
+}
+
+.wrap2 {
+	position: absolute;
+	width: 80px;
+	height: 20px;
+	margin-top: -3vh;
+	margin-left: 47.8vw;
+	transition: all 1.5s ease-out, 10s z-index;
+}
+
+.wrap2-show {
 	width: 150px;
 	transform: translate3d(0vw, 0px, 0px);
 	z-index: 1;
@@ -130,7 +145,8 @@ a.active {
 	margin-left: 0;
 }
 
-.opinion-show {
+.word-show {
+	transition: all 1.5s ease-out, 10s z-index;
 	transform: translate3d(5vw, 0px, 0px);
 	z-index: 1;
 }

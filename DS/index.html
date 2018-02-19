@@ -36,11 +36,10 @@
 			<span>/</span>
 			<a href="#">рус</a>	
 		</div>
-		<div class="test">
-			
-		</div>
+		<div class="wrap1"></div>
+		<div class="wrap2"></div>
 		<div class="opinion">
-			<span>opinion</span>
+			<span class="word">opinion</span>
 			<br>
 			<span class="years">2013 - 2017</span>
 		</div>
@@ -84,8 +83,10 @@
 		var closeMenu = document.querySelector('.close-btn');
 		var overlay = document.querySelector('.overlay');
 		var page = document.querySelector('.page');
-		var opinion = document.querySelector('.opinion');
-		var test = document.querySelector('.test');
+		var word = document.querySelector('.word');
+		var years = document.querySelector('.years');
+		var wrap1 = document.querySelector('.wrap1');
+		var wrap2 = document.querySelector('.wrap2');
 		var over = document.getElementById('overlay');
 
 		// showMenu.onclick = function() {
@@ -96,14 +97,24 @@
 			overlay.classList.remove('show');
 		}
 
-		test.onmouseenter = function() {
-			test.classList.add('test-show');
-			opinion.classList.add('opinion-show');
+		wrap1.onmouseenter = function() {
+			wrap1.classList.add('wrap1-show');
+			word.classList.add('word-show');
 		}
 
-		test.onmouseleave = function() {
-			test.classList.remove('test-show');
-			opinion.classList.remove('opinion-show');
+		wrap1.onmouseleave = function() {
+			wrap1.classList.remove('wrap1-show');
+			word.classList.remove('word-show');
+		}
+
+		wrap2.onmouseenter = function() {
+			wrap2.classList.add('wrap2-show');
+			years.classList.add('word-show');
+		}
+
+		wrap2.onmouseleave = function() {
+			wrap2.classList.remove('wrap2-show');
+			years.classList.remove('word-show');
 		}
 
 		document.onclick = function(e) {
