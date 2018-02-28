@@ -3,25 +3,75 @@
 <head>
   <title>IMBUSY</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" type="text/css">
   <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <script src="js/wow.min.js"></script>
+  <script src="js/wow.min.js">
+  </script>
+  <script src="js/jquery-2.1.3.min.js">
+  </script>
+  <script type="text/javascript">
+    if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+    window.onmousewheel = document.onmousewheel = wheel;
+
+    function wheel(event) {
+      var delta = 0;
+      if (event.wheelDelta) delta = event.wheelDelta / 120;
+      else if (event.detail) delta = -event.detail / 3;
+
+      handle(delta);
+      if (event.preventDefault) event.preventDefault();
+      event.returnValue = false;
+    }
+
+    var goUp = true;
+    var end = null;
+    var interval = null;
+
+    function handle(delta) {
+  var animationInterval = 10; //lower is faster
+  var scrollSpeed = 10; //lower is faster
+
+  if (end == null) {
+    end = $(window).scrollTop();
+  }
+  end -= 20 * delta;
+  goUp = delta > 0;
+
+  if (interval == null) {
+    interval = setInterval(function () {
+      var scrollTop = $(window).scrollTop();
+      var step = Math.round((end - scrollTop) / scrollSpeed);
+      if (scrollTop <= 0 || 
+        scrollTop >= $(window).prop("scrollHeight") - $(window).height() ||
+        goUp && step > -1 || 
+        !goUp && step < 1 ) {
+        clearInterval(interval);
+      interval = null;
+      end = null;
+    }
+    $(window).scrollTop(scrollTop + step );
+  }, animationInterval);
+  }
+  }
+  $('a[href*=#]').click(function(event){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+  });
+  new WOW().init();
+  </script>
 </head>
 <body>
-
-  <script>
-    new WOW().init();
-  </script>
-
-  <header>  
+  <header>
     <div class="container header__container">
       <div class="row header__row">
         <div class="col-12">
-          <ul id="menu" class="header__nav-bar-menu wow fadeInDown delay-1s">
+          <ul class="header__nav-bar-menu wow fadeInDown delay-0_5s" id="menu">
             <li class="active">
               <a href="#">О компании</a>
             </li>
@@ -35,7 +85,7 @@
               <a href="#">Контакты</a>
             </li>
           </ul>
-          <div class="social-btn header__social">
+          <div class="social-btn header__social wow fadeInDown delay-1s">
             <ul>
               <li>
                 <a href="#"><i class="fa fa-vk"></i></a>
@@ -55,351 +105,323 @@
       </div>
     </div>
   </header>
-
   <div class="top-wrapper">
     <div class="container top__container">
       <div class="row top__row">
         <div class="col-12">
-          <h1 class="top__title wow fadeIn delay-1s"><span>I</span>MBUSY</h1>
-          <p class="top__dscp wow fadeIn delay-1s">
-            <strong>Первый</strong> путь к успеху
-          </p>
-          <hr>
-          <p class="top__text top__text_big">
-            Запросто-Ответная система для поиска и нахождения занятости.<br>
-            Другими словами - целый HR отдел в одном приложении, работает круглосуточно и очень умен!
-          </p>
-          <p class="top__text top__text_small">
-            Да! Нам очень нравится слово «занят» и все его производные…
-          </p>
-          <a class="btn ios-btn" href="#">
-            <img src="img/ios-btn.png" alt="">
-          </a>
-          <a class="btn to-below-btn" href="#">
-            <img class="to-below__bg" src="img/below-btn.png">
-            <img class="to-below__arrow" src="img/arrow.png">
-          </a>
+          <h1 class="top__title wow fadeIn delay-0_5s"><span>I</span>MBUSY</h1>
+          <p class="top__dscp wow fadeIn delay-1s"><strong>Первый</strong> путь к успеху</p>
+          <hr class="wow fadeIn delay-1s">
+          <p class="top__text top__text_big wow fadeIn delay-1_5s">Запросто-Ответная система для поиска и нахождения занятости.<br>
+          Другими словами - целый HR отдел в одном приложении, работает круглосуточно и очень умен!</p>
+          <p class="top__text top__text_small wow fadeIn delay-2s">Да! Нам очень нравится слово «занят» и все его производные…</p><a class="btn ios-btn wow fadeIn delay-2_5s" href="#"><img alt="" src="img/ios-btn.png"></a> <a class="btn to-below-btn wow fadeInUp delay-1_5s" href="#target"><img class="to-below__bg" src="img/below-btn.png"> <img class="to-below__arrow" src="img/arrow.png"></a>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="about-wrapper">
+  <div class="about-wrapper" id="target">
     <div class="container about__container">
       <div class="row container-title wow fadeInDown">
         <div class="col-12">
-         <h2 class="about-title">IMBUSY</h2>
-         <hr>
-       </div>
-     </div>
-     <div class="row justify-content-between about__row">
-      <div class="col-12">
-        <p class="about__text wow fadeInDown delay-1_5s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12 about__col">
-        <h4>Наши клиенты</h4>
-        <ul>
-          <li>Кампании нуждающиеся в кадрах</li>
-          <li>Малые организации</li>
-          <li>Частные лица</li>
-        </ul>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12 about__col about__col_center">
-        <h4>Наша аудитория</h4>
-        <p>Работоспособные люди возрастом 17-35 лет.
-        С желанием развиваться и не тратить время зря!</p>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12 about__col">
-        <h4>Основной вид деятельности</h4>
-        <p>Размещение информации</p>
-      </div>
-      <div class="col-12 about__video">
-       <!--  <iframe width="560" height="315" src="https://www.youtube.com/embed/dk9uNWPP7EA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="purposes-wrapper">
-  <div class="container purposes__container">
-    <div class="row container-title wow fadeInDown">
-     <div class="col-12">
-       <h2>Цели <span>проекта</span></h2>
-       <hr>
-     </div>
-   </div>
-   <div class="row justify-content-center purposes__row">
-    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 purposes__col wow fadeInLeftSmall delay-0_5s">
-      <div class="purposes-content">
-       <img src="img/deals.png" alt="">
-       <h3>Успешные сделки</h3>
-     </div>
-   </div>
-   <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 purposes__col wow fadeInLeftSmall delay-0_5s">
-    <div class="purposes-content">
-      <img src="img/clock.png" alt="">
-      <h3>Экономить ваше<br> время</h3>
-    </div>
-  </div>
-  <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 purposes__col wow fadeInLeftSmall delay-0_5s">
-    <div class="purposes-content">
-      <img src="img/users.png" alt="">
-      <h3>Ежемесячный прирост пользователей</h3>
-    </div>
-  </div>
-  <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 purposes__col wow fadeInLeftSmall delay-0_5s">
-    <div class="purposes-content">
-      <img src="img/trust.png" alt="">
-      <h3>Доверие</h3>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-
-<div class="values-wrapper">
-  <div class="container values__container">
-    <div class="row container-title wow fadeInDown">
-      <div class="col-xl-12">
-        <h2>С нами уже</h2>
-        <hr>
-      </div>
-    </div>
-    <div class="row justify-content-between values__row">
-      <div class="col-12 advantages-col">
-        <div class="values-content wow fadeInLeft delay-0_5s">
-         <p class="users-value">0001965</p>
-         <p>Присоединяйся. Будь занят!</p>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
-
-<div class="team-wrapper">
-  <div class="container team__container">
-    <div class="row container-title wow fadeInDown">
-     <div class="col-12">
-       <h2><span>Наша</span> команда</h2>
-     </div>
-   </div>
-   <div class="row justify-content-between team__row">
-    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeft delay-0_5s">
-      <div class="team__col">
-        <img class="team__img" src="img/team-1.png" alt="">
-        <h3 class="team__name">Jane Smith</h3>
-        <h4 class="team__prof">Marketing CEO</h4>
-        <div class="social-btn team__social">
-          <ul>
-            <li>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-dribbble"></i></a>
-            </li>
-          </ul>
+          <h2 class="about-title">IMBUSY</h2>
+          <hr>
         </div>
       </div>
-    </div>
-    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeft delay-0_5s">
-      <div class="team__col">
-        <img class="team__img" src="img/team-2.png" alt="">
-        <h3 class="team__name">Jane Smith</h3>
-        <h4 class="team__prof">Marketing CEO</h4>
-        <div class="social-btn team__social">
+      <div class="row justify-content-between about__row">
+        <div class="col-12">
+          <p class="about__text wow fadeInDown delay-0_5s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 about__col wow fadeIn delay-1s">
+          <h4>Наши клиенты</h4>
           <ul>
-            <li>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-            </li>
+            <li>Кампании нуждающиеся в кадрах</li>
+            <li>Малые организации</li>
+            <li>Частные лица</li>
           </ul>
         </div>
-      </div>
-    </div>
-    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeft delay-0_5s">
-      <div class="team__col">
-        <img class="team__img" src="img/team-3.png" alt="">
-        <h3 class="team__name">Jane Smith</h3>
-        <h4 class="team__prof">Marketing CEO</h4>
-        <div class="social-btn team__social">
-          <ul>
-            <li>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-            </li>
-          </ul>
+        <div class="col-lg-4 col-md-6 col-12 about__col about__col_center wow fadeIn delay-1_5s">
+          <h4>Наша аудитория</h4>
+          <p>Работоспособные люди возрастом 17-35 лет. С желанием развиваться и не тратить время зря!</p>
         </div>
-      </div>
-    </div>
-    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeft delay-0_5s">
-      <div class="team__col">
-        <img class="team__img" src="img/team-4.png" alt="">
-        <h3 class="team__name">Jane Smith</h3>
-        <h4 class="team__prof">Marketing CEO</h4>
-        <div class="social-btn team__social">
-          <ul>
-            <li>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-            </li>
-          </ul>
+        <div class="col-lg-4 col-md-6 col-12 about__col wow fadeIn delay-2s">
+          <h4>Основной вид деятельности</h4>
+          <p>Размещение информации</p>
         </div>
-      </div>
-    </div>
-    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeft delay-0_5s">
-      <div class="team__col">
-        <img class="team__img" src="img/team-5.png" alt="">
-        <h3 class="team__name">Jane Smith</h3>
-        <h4 class="team__prof">Marketing CEO</h4>
-        <div class="social-btn team__social">
-          <ul>
-            <li>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeft delay-0_5s">
-      <div class="team__col">
-        <img class="team__img" src="img/team-6.png" alt="">
-        <h3 class="team__name">Jane Smith</h3>
-        <h4 class="team__prof">Marketing CEO</h4>
-        <div class="social-btn team__social">
-          <ul>
-            <li>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-            </li>
-          </ul>
+        <div class="col-12 about__video">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/dk9uNWPP7EA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-
-<div class="contacts-wrapper">
-  <div class="container contacts__container">
-    <div class="row container-title wow fadeInDown">
-      <div class="col-xl-12">
-        <h2><span>Наши</span> контакты</h2>
-        <hr>
+  <div class="purposes-wrapper">
+    <div class="container purposes__container">
+      <div class="row container-title wow fadeInDown">
+        <div class="col-12">
+          <h2>Цели <span>проекта</span></h2>
+          <hr>
+        </div>
+      </div>
+      <div class="row justify-content-center purposes__row">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 purposes__col wow fadeInLeftSmall delay-0_5s">
+          <div class="purposes-content">
+            <img alt="" src="img/deals.png">
+            <h3>Успешные сделки</h3>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 purposes__col wow fadeInLeftSmall delay-1s">
+          <div class="purposes-content">
+            <img alt="" src="img/clock.png">
+            <h3>Экономить ваше<br>
+            время</h3>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 purposes__col wow fadeInLeftSmall delay-1_5s">
+          <div class="purposes-content">
+            <img alt="" src="img/users.png">
+            <h3>Ежемесячный прирост пользователей</h3>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 purposes__col wow fadeInLeftSmall delay-2s">
+          <div class="purposes-content">
+            <img alt="" src="img/trust.png">
+            <h3>Доверие</h3>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row contacts__row">
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 contacts__col map wow fadeInLeft">
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805.9160406529352!2d29.783757130624092!3d31.12770353447962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f595323d6c231d%3A0x1683c014a692f4fc!2zS2hhbGlsIEJhbGx3LCBBbCBCZWl0YXNoIEdoYXJiLCBRZXNtIEFkIERla2hpbGFoLCBBbGV4YW5kcmlhIEdvdmVybm9yYXRlLCDQldCz0LjQv9C10YI!5e0!3m2!1sru!2sru!4v1519836200191" width="360" height="445" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+  </div>
+  <div class="values-wrapper">
+    <div class="container values__container">
+      <div class="row container-title wow fadeInDown">
+        <div class="col-xl-12">
+          <h2>С нами уже</h2>
+          <hr>
+        </div>
       </div>
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 contacts__col wow fadeIn delay-0_5s">
-        <div class="contact">
-          <ul>
-           <li>
-             <i class="fa fa-map-marker" aria-hidden="true"></i>
-             <a href="#">109012, Москва,<br>
-              красная площадь, д.1
-            </a>
-          </li>
-          <li>
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <div class="phone">
-              <a href="#">8 (800) 777-77-77</a><br>
-              <a href="#">8 (499) 777-77-77</a>
+      <div class="row justify-content-between values__row">
+        <div class="col-12 advantages-col">
+          <div class="values-content wow fadeInDown delay-0_5s">
+            <p class="users-value">0001965</p>
+            <p>Присоединяйся. Будь занят!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="team-wrapper">
+    <div class="container team__container">
+      <div class="row container-title wow fadeInDown">
+        <div class="col-12">
+          <h2><span>Наша</span> команда</h2>
+        </div>
+      </div>
+      <div class="row justify-content-between team__row">
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeftSmall delay-0_5s">
+          <div class="team__col">
+            <img alt="" class="team__img" src="img/team-1.png">
+            <h3 class="team__name">Jane Smith</h3>
+            <h4 class="team__prof">Marketing CEO</h4>
+            <div class="social-btn team__social">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                </li>
+              </ul>
             </div>
-          </li>
-          <li>
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <a href="#">imbusy@gmail.com</a>
-          </li>
-          <li>
-            <a class="btn ios-btn" href="#">
-              <img src="" alt="">
-            </a>
-          </li>
-        </ul>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeftSmall delay-1s">
+          <div class="team__col">
+            <img alt="" class="team__img" src="img/team-2.png">
+            <h3 class="team__name">Jane Smith</h3>
+            <h4 class="team__prof">Marketing CEO</h4>
+            <div class="social-btn team__social">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeftSmall delay-1_5s">
+          <div class="team__col">
+            <img alt="" class="team__img" src="img/team-3.png">
+            <h3 class="team__name">Jane Smith</h3>
+            <h4 class="team__prof">Marketing CEO</h4>
+            <div class="social-btn team__social">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeftSmall delay-2s">
+          <div class="team__col">
+            <img alt="" class="team__img" src="img/team-4.png">
+            <h3 class="team__name">Jane Smith</h3>
+            <h4 class="team__prof">Marketing CEO</h4>
+            <div class="social-btn team__social">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeftSmall delay-2_5s">
+          <div class="team__col">
+            <img alt="" class="team__img" src="img/team-5.png">
+            <h3 class="team__name">Jane Smith</h3>
+            <h4 class="team__prof">Marketing CEO</h4>
+            <div class="social-btn team__social">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 wow fadeInLeftSmall delay-3s">
+          <div class="team__col">
+            <img alt="" class="team__img" src="img/team-6.png">
+            <h3 class="team__name">Jane Smith</h3>
+            <h4 class="team__prof">Marketing CEO</h4>
+            <div class="social-btn team__social">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 contacts__col wow fadeInRight">
-      <form class="feedback" action="#">
-        <div class="field">
-          <label>Ваше Имя</label>
-          <input class="feedback_input" type="text">
-        </div>
-        <div class="field">
-          <label>Email адрес*</label>
-          <input class="feedback_input" type="text" required="">
-        </div>
-        <div class="field">
-          <label>Номер телефона*</label>
-          <input class="feedback_input" type="text" required="">
-        </div>
-        <div class="field">
-          <textarea placeholder="Текст сообщения..." required=""></textarea>
-        </div>
-        <button class="btn submit-btn" type="sumbit">Отправить сообщение</button>
-      </form>
-    </div>
   </div>
-</div>
-</div>
-
-<footer>
- <div class="container">
-   <div class="row">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-      <div class="social-btn footer__social">
-        <ul>
-          <li>
-            <a href="#"><i class="fa fa-vk"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-          </li>
-        </ul>
+  <div class="contacts-wrapper">
+    <div class="container contacts__container">
+      <div class="row container-title wow fadeInDown">
+        <div class="col-xl-12">
+          <h2><span>Наши</span> контакты</h2>
+          <hr>
+        </div>
       </div>
-      <address>© 2018 IMbusy | All Rights Reserved</address>
+      <div class="row contacts__row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 contacts__col map wow fadeInLeft">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805.9160406529352!2d29.783757130624092!3d31.12770353447962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f595323d6c231d%3A0x1683c014a692f4fc!2zS2hhbGlsIEJhbGx3LCBBbCBCZWl0YXNoIEdoYXJiLCBRZXNtIEFkIERla2hpbGFoLCBBbGV4YW5kcmlhIEdvdmVybm9yYXRlLCDQldCz0LjQv9C10YI!5e0!3m2!1sru!2sru!4v1519836200191" width="360" height="445" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 contacts__col wow fadeIn delay-0_5s">
+          <div class="contact">
+            <ul>
+              <li>
+                <i aria-hidden="true" class="fa fa-map-marker"></i> <a href="#">109012, Москва,<br>
+                красная площадь, д.1</a>
+              </li>
+              <li>
+                <i aria-hidden="true" class="fa fa-phone"></i>
+                <div class="phone">
+                  <a href="#">8 (800) 777-77-77</a><br>
+                  <a href="#">8 (499) 777-77-77</a>
+                </div>
+              </li>
+              <li>
+                <i aria-hidden="true" class="fa fa-envelope"></i> <a href="#">imbusy@gmail.com</a>
+              </li>
+              <li>
+                <a class="btn ios-btn" href="#"><img alt="" src="img/ios-btn.png"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 contacts__col wow fadeInRight">
+          <form action="#" class="feedback">
+            <div class="field">
+              <label>Ваше Имя</label> <input class="feedback_input" type="text">
+            </div>
+            <div class="field">
+              <label>Email адрес*</label> <input class="feedback_input" required="" type="text">
+            </div>
+            <div class="field">
+              <label>Номер телефона*</label> <input class="feedback_input" required="" type="text">
+            </div>
+            <div class="field">
+              <textarea placeholder="Текст сообщения..." required=""></textarea>
+            </div><button class="btn submit-btn" type="sumbit">Отправить сообщение</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</footer>
-
-</body> 
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="social-btn footer__social wow fadeIn delay-0_5s">
+            <ul>
+              <li>
+                <a href="#"><i class="fa fa-vk"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <address class="wow fadeIn delay-1s">
+            © 2018 IMbusy | All Rights Reserved
+          </address>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
