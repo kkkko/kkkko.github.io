@@ -501,6 +501,9 @@ header {
   background-color: #aaa;
   color: #ffffff;
 }
+.contacts-wrapper iframe {
+  max-width: 100%;
+}
 .contacts__col {
   margin-bottom: 3vw;
 }
@@ -598,6 +601,9 @@ header {
   margin: 0 auto;
   background-color: #2d3030;
 }
+.submit-btn:hover {
+  cursor: pointer;
+}
 footer {
   padding-top: 35px;
 }
@@ -635,9 +641,14 @@ footer address {
   html {
     font-size: 65%;
   }
-  .about__row,
-  .contacts__row {
+  .team__col {
+    text-align: center;
+  }
+  .about__row {
     justify-content: center!important;
+  }
+  .contacts__row {
+    justify-content: space-around!important;
   }
   .about__col {
     text-align: center;
@@ -693,6 +704,12 @@ footer address {
   }
   .team__col {
     margin-bottom: 40px;
+  }
+  .map {
+    text-align: center;
+  }
+  .submit-btn {
+    font-size: 14px;
   }
   .footer__social {
     width: 100%;
